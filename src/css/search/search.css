@@ -1,0 +1,91 @@
+.search_all_group {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.search_input {
+  width: 700px;
+  height: 45px;
+  border-radius: 40px;
+  background-color: #8a8a8a;
+  border: none;
+  padding-left: 20px;
+  color: #FCFEFD;
+  font-size: 17px;
+}
+
+.search_group {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.search_input::placeholder {
+  color: #FCFEFD;
+}
+
+.search_button {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  margin-left: -45px;
+  border: none;
+  background-color: transparent;
+  margin-top: 8px;
+}
+
+.search_button img {
+  width: 26px;
+  height: 26px;
+}
+
+.only_resell_btn {
+  width: 100px;
+  height: 30px;
+  margin-left: 80px;
+  margin-bottom: 50px;
+  background-color: #0371b9;
+  border: none;
+  border-radius: 5px;
+  color: #FCFEFD;
+}
+
+.resell_none2 {
+  display: flex;
+  height: 30px;
+  text-align: center;
+  justify-content: center;
+  width: 100vw;
+  margin-left: 36px;
+  font-size: 22px;
+}
+
+.search_all_group h1 {
+  position: absolute;
+  font-size: 55px;
+  font-weight: 600;
+  color: #FCFEFD;
+  text-align: center;
+  margin-left: 0px;
+}
+
+.search_all_group .shop_title_group img {
+  margin-top: -12px;
+}
+
+@media (max-width: 750px) {
+  .search_input {
+    width: calc(100vw - 32px)
+  }
+  
+  .only_resell_btn {
+    margin-left: 16px;
+  }
+
+  .search_all_group h1 {
+    font-size: 2em;
+  }
+  .search_all_group {
+    margin-top: -20px;
+  }
+}

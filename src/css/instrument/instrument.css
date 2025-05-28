@@ -1,0 +1,701 @@
+.shop {
+  height: auto;
+  position: relative;
+}
+
+.shop a {
+  text-decoration: none;
+  color: #8a8a8a;
+}
+
+.menu.active {
+  color: #0A0A0A;
+  font-weight: 700;
+}
+
+.menu_spot {
+  padding: 0 14px;
+}
+
+.shop_title {
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.shop_title_group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 343px;
+  background-image: url("/images/instrument/instrument_title_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.shop_title_group img {
+  display: flex;
+  width: 50%;
+  align-items: center;
+}
+
+.shop_title h1 {
+  position: absolute;
+  font-size: 55px;
+  font-weight: 600;
+  color: #FCFEFD;
+  text-align: center;
+}
+
+.Smenu2 {
+  width: 100%;
+  height: 87px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #8a8a8a;
+  border-top: 1px solid #8a8a8a;
+}
+
+.Smenu {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  float: left;
+  display: flex;
+  gap: 25px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #8a8a8a;
+  min-width: 600px;
+}
+
+.filter_group {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter {
+  display: flex;
+  font-size: 22px;
+  font-weight: 500;
+  gap: 13px;
+  color: #8a8a8a;
+}
+
+.product_group_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 20px;
+  width: 1743px;
+  min-height: 100vh;
+}
+
+.grid_btn {
+  display: flex;
+  width: 1743px;
+  margin-bottom: -20px;
+  font-size: 18px;
+  margin-top: 0px;
+  flex-direction: column;
+  position: relative;
+}
+
+.grid_btn div {
+  display: flex;
+  width: 120px;
+  align-items: center;
+  margin-right: 0px;
+}
+
+.grid_btn button {
+  border: none;
+  background-color: transparent;
+  height: 50px;
+}
+
+.grid_btn button img {
+  width: 20px;
+}
+
+.drop_grid {
+  display: none !important;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  position: absolute;
+  right: 10px;
+  margin-top: 45px;
+  width: 98px;
+  height: 145px;
+  border: 1px solid #8a8a8a;
+  font-size: 18px;
+  color: #8a8a8a;
+  background-color: #FCFEFD;
+}
+
+.drop_grid.active {
+  display: flex !important;
+}
+
+.drop_grid p:nth-child(2),
+.drop_grid p:nth-child(1) {
+  margin-left: calc(18px);
+}
+
+.drop_grid p:hover {
+  font-weight: 500;
+  color: #0a0a0a;
+}
+
+.product_group {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.product_img {
+  display: flex;
+  width: 420px;
+  height: 460px;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #eeeeee;
+}
+
+.product_img a img {
+  width: 350px;
+  height: 357px;
+}
+
+.product_group button {
+  border: none;
+  background-color: transparent;
+  margin-top: -45px;
+  margin-bottom: 25px;
+  margin-right: 13px;
+}
+
+.product_group h3 {
+  margin-left: 0px;
+  margin-bottom: 35px;
+  font-size: 20px;
+  font-weight: 500;
+  width: 420px;
+  text-align: left;
+  height: 40px;
+}
+
+.product_group p {
+  margin-left: 0px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.shop_discount_group {
+  margin-left: 0px;
+  display: inline-flex;
+  align-items: end;
+  gap: 15px;
+  margin-top: -12px;
+}
+
+.shop_discount_group > p {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ff4a01;
+  letter-spacing: -0.03em;
+  margin-left: 0px;
+  margin-top: 5px;
+}
+
+.shop_discount_group div {
+  display: flex;
+  gap: 15px;
+}
+
+.shop_discount_group div p:nth-child(2) {
+  text-decoration: line-through;
+  color: #8a8a8a;
+  font-weight: 500;
+  text-align: left;
+}
+
+.page_change {
+  width: 100%;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.page_change div {
+  display: flex;
+  font-size: 17px;
+  width: 72px;
+  align-items: center;
+  gap: 13px;
+}
+
+.page_change button {
+  border: none;
+  background-color: transparent;
+  height: 14px;
+  text-align: center;
+}
+
+.page_change p {
+  font-weight: 500;
+  color: #8a8a8a;
+}
+
+.cart_color_select {
+  align-items: center;
+  margin-left: 0px;
+  width: 260px;
+}
+
+.cart_color_select > div {
+  color: #8a8a8a;
+  font-size: 19px;
+  margin-left: 0px;
+}
+
+.cart_color_select div:nth-child(1) {
+  margin-bottom: 10px;
+}
+
+.cart_color_select div select {
+  width: 260px;
+  height: 30px;
+  border-radius: 0px;
+  border: 1px solid #8a8a8a;
+  margin-left: 0px;
+}
+
+@media (max-width: 1920px) {
+  .product_group_list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1792px) {
+  .product_group_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 20px;
+    width: 1300px;
+  }
+
+  .myresell {
+    width: 1300px;
+  }
+
+  .grid_btn {
+    display: flex;
+    width: 1300px;
+    margin-bottom: -20px;
+    font-size: 18px;
+    margin-top: 65px;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .grid_btn div {
+    display: flex;
+    width: 120px;
+    align-items: center;
+    margin-right: 0px;
+  }
+
+  .grid_btn button {
+    border: none;
+    background-color: transparent;
+    height: 50px;
+  }
+
+  .product_group {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .product_img {
+    display: flex;
+    width: 420px;
+    height: 460px;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #eeeeee;
+  }
+
+  .product_img a img {
+    width: 350px;
+    height: 357px;
+  }
+
+  .product_group button {
+    border: none;
+    background-color: transparent;
+    margin-top: -45px;
+    margin-bottom: 25px;
+    margin-right: 13px;
+  }
+
+  .shop_discount_group {
+    margin-left: 0px;
+    display: inline-flex;
+    align-items: end;
+    gap: 15px;
+    margin-top: -12px;
+  }
+
+  .shop_discount_group > p {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ff4a01;
+    letter-spacing: -0.03em;
+    margin-left: 0px;
+  }
+
+  .shop_discount_group div {
+    display: flex;
+    gap: 15px;
+  }
+
+  .shop_discount_group div p:nth-child(2) {
+    text-decoration: line-through;
+    color: #8a8a8a;
+    font-weight: 500;
+    text-align: left;
+  }
+  .shop_title_group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    height: 250px;
+    background-image: url("/images/instrument/instrument_title_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 1330px) {
+  .product_group_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 20px;
+    width: 880px;
+  }
+
+  .myresell {
+    width: 880px;
+  }
+
+
+  .grid_btn {
+    display: flex;
+    width: 880px;
+    margin-bottom: -20px;
+    font-size: 18px;
+    margin-top: 65px;
+    flex-direction: column;
+    position: relative;
+  }
+  .shop_title_group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    height: 200px;
+    background-image: url("/images/instrument/instrument_title_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .shop_title_group img {
+    display: flex;
+    width: 60%;
+    align-items: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .product_group_list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    gap: 20px;
+    width: 420px;
+  }
+
+  .myresell {
+    width: 420px;
+  }
+
+  .grid_btn {
+    display: flex;
+    width: 420px;
+    margin-bottom: -20px;
+    font-size: 18px;
+    margin-top: 65px;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .shop_title_group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    height: 180px;
+    background-image: url("/images/instrument/instrument_title_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .shop_title_group img {
+    display: flex;
+    width: 70%;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1020px) {
+  .shop .shop_title h1 {
+    position: absolute;
+    font-size: 2em;
+    font-weight: 600;
+    width: 100%;
+    color: #FCFEFD;
+    text-align: center;
+  }
+}
+@media (max-width: 650px) {
+  .Smenu2 {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #cdcdcd;
+    border-top: 1px solid #cdcdcd;
+  }
+
+  .Smenu {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    float: left;
+    display: flex;
+    gap: 0px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #8a8a8a;
+    min-width: 450px;
+  }
+
+  .shop .shop_title h1 {
+    position: absolute;
+    font-size: 1.5em;
+    font-weight: 600;
+    width: 100%;
+    color: #FCFEFD;
+    text-align: center;
+  }
+
+  .shop_title_group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    height: 130px;
+    background-image: url("/images/instrument/instrument_title_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .shop_title_group img {
+    display: flex;
+    width: 70%;
+    align-items: center;
+  }
+}
+
+@media (max-width: 460px) {
+  .product_group_list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    width: 325px;
+  }
+
+  .shop_title_group img {
+    display: none;
+  }
+
+  .myresell {
+    width: 325px;
+  }
+
+  .product_img {
+    display: flex;
+    width: 325px;
+    height: 358px;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #eeeeee;
+  }
+
+  .grid_btn {
+    display: flex;
+    width: 325px;
+    margin-bottom: -20px;
+    font-size: 18px;
+    margin-top: 65px;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .shop .shop_title h1 {
+    position: absolute;
+    font-size: 1.5em;
+    font-weight: 600;
+    width: 100%;
+    color: #FCFEFD;
+    text-align: center;
+    margin-top: calc(1.2vh);
+  }
+
+  .product_img a img {
+    width: 270px;
+    height: 275px;
+  }
+
+  .product_group button {
+    border: none;
+    background-color: transparent;
+    margin-top: -45px;
+    margin-bottom: 25px;
+    margin-right: 13px;
+  }
+
+  .product_group h3 {
+    width: 325px;
+    font-size: 17px;
+    height: 20px;
+  }
+
+  .product_group p {
+    font-size: 21px;
+  }
+
+  .shop_discount_group {
+    margin-left: 0px;
+    display: inline-flex;
+    align-items: end;
+    gap: 10px;
+    margin-top: -12px;
+  }
+
+  .Smenu {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    float: left;
+    display: flex;
+    gap: 0px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #8a8a8a;
+    min-width: 350px;
+  }
+}
+
+@media (max-width: 320px) {
+  .product_group_list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    width: 325px;
+  }
+
+  .myresell {
+    width: 325 px;
+  }
+
+  .product_img {
+    display: flex;
+    width: 325px;
+    height: 358px;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #eeeeee;
+  }
+  .grid_btn {
+    display: flex;
+    width: 325px;
+    margin-bottom: -20px;
+    font-size: 18px;
+    margin-top: 65px;
+    flex-direction: column;
+    position: relative;
+  }
+  .product_img a img {
+    width: 270px;
+    height: 275px;
+  }
+
+  .product_group button {
+    border: none;
+    background-color: transparent;
+    margin-top: -45px;
+    margin-bottom: 25px;
+    margin-right: 13px;
+  }
+
+  .shop_discount_group {
+    margin-left: 0px;
+    display: inline-flex;
+    align-items: end;
+    gap: 10px;
+    margin-top: -12px;
+  }
+
+  .Smenu {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    float: left;
+    display: flex;
+    gap: 0px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #8a8a8a;
+    min-width: 350px;
+  }
+
+  .shop .shop_title h1 {
+    position: absolute;
+    font-size: 1.5em;
+    font-weight: 600;
+    width: 100%;
+    color: #FCFEFD;
+    text-align: center;
+    margin-top: calc(1.2vh);
+  }
+}
+

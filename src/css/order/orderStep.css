@@ -1,0 +1,30 @@
+.step_title {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.step_title p {
+  position: absolute;
+  left: 50%;
+  font-size: 35px;
+  transform: translateX(-50%);
+  font-weight: 700;
+  color: #0a0a0a;
+  text-align: center;
+  margin: 0;
+}
+
+.order_step {
+  display: flex;
+  align-items: center;
+  margin-right: 90px;
+  font-weight: 700;
+  font-size: 17px;
+  color: #6b6b6b;
+}
+@media (max-width: 1100px) {
+  .order_step{
+    display: none;
+  }
+}

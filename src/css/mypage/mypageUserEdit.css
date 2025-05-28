@@ -1,0 +1,458 @@
+.memInfoUpdate_group {
+  margin-top: 38px;
+  margin-bottom: 250px;
+}
+
+.infoUp_box {
+  display: flex;
+  height: 60px;
+  border-bottom: 1px solid #8a8a8a;
+  font-size: 17px;
+  font-weight: 600;
+  align-items: center;
+}
+
+.user_edit_alert {
+  display: inline-flex;
+  align-items: center;
+  margin-top: -7px;
+}
+
+.user_edit_alert p {
+  color: #ff4a01;
+}
+
+.user_edit_alert p:nth-child(2) {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.infoUp_box_p1 {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 190px;
+  padding-left: 27px;
+}
+
+.infoUp_box p:nth-child(2) {
+  margin-left: 0px;
+  margin-right: 15px;
+  color: #6b6b6b;
+}
+
+.infoUp_box :nth-child(2) {
+  margin-left: 0px;
+}
+
+.infoUp_box p span {
+  color: #0a0a0a;
+}
+
+.infoUp_box_btn {
+  width: 105px;
+  height: 26px;
+  border: 1px solid #0A0A0A;
+  margin-left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.infoUp_box_sbtn {
+  width: 70px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0px;
+  cursor: pointer;
+}
+
+/* 주소 그룹 */
+.infoUp_box_addgroup {
+  display: flex;
+  height: auto;
+  border-bottom: 2px solid #0a0a0a;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.infoUp_box_address {
+  margin-left: 0px;
+  color: #6b6b6b;
+}
+
+.infoUp_box_address p {
+  margin-left: 0px;
+  margin-bottom: 10px;
+}
+
+.infoUp_box_address p:nth-child(4) {
+  margin-bottom: 0px;
+}
+
+input.infoUp_box_zipcode {
+  width: 250px;
+  margin-bottom: 10px;
+  height: 35px;
+  color: #6b6b6b;
+  padding-left: 10px;
+  border: 1px solid #8a8a8a;
+  font-size: 17px;
+  font-weight: 600;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+input.infoUp_box_zipcode:nth-child(4) {
+  margin-bottom: 0px;
+}
+
+input.infoUp_box_add {
+  width: 665px;
+  margin-bottom: 10px;
+  height: 35px;
+  color: #6b6b6b;
+  display: flex;
+  padding-left: 10px;
+  border: 1px solid #8a8a8a;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.mypage_zipcode_btn {
+  width: 105px;
+  height: 26px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid #0A0A0A;
+  color: #0A0A0A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.infoUp_box_name {
+  height: 35px;
+  color: #6b6b6b;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #8a8a8a;
+  padding: 0 10px;
+}
+
+input.infoUp_box_name {
+  text-align: center;
+  outline: none;
+  font-size: 17px;
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.infoUp_box_nobox {
+  border: none;
+  color: #6b6b6b;
+}
+
+input.infoUp_box_nobox {
+  height: 35px;
+  color: #6b6b6b;
+  border: 1px solid #8a8a8a;
+  padding-left: 10px;
+  outline: none;
+  font-size: 17px;
+  font-weight: 600;
+  width: auto;
+  margin-right: 15px;
+}
+
+input.infoUp_box_number {
+  width: 100px;
+  height: 35px;
+  color: #6b6b6b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #8a8a8a;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* 회원탈퇴 버튼 */
+.memberout {
+  width: 100px;
+  height: 35px;
+  border: 1px solid #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 0px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 중복 확인 버튼 */
+.mypage_id_check {
+  width: 100px;
+  height: 26px;
+  border: 1px solid #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  margin-top: 4.5px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* 경고 글씨 */
+.mypage_red_text {
+  margin-left: 0px;
+  color: #ff4a01;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* 모달 */
+.mypage_modal_title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.mypage_modal_input {
+  border: 1px solid #8a8a8a;
+  padding: 10px;
+  /* margin-left: 5px; */
+  height: 35px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.mypage_modal_input_passwd {
+  border: 1px solid #8a8a8a;
+  padding: 10px;
+  height: 35px;
+  font-size: 17px;
+}
+
+.user_edit_error {
+  display: inline-flex;
+  color: #ff4a01;
+  margin-left: 0px;
+  gap: 5px;
+  height: 35px;
+  margin-top: 10px;
+}
+
+.user_edit_error p {
+  display: inline-flex;
+  color: #ff4a01 !important;
+  margin-top: 4px;
+}
+
+.userEdit_email div div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.userEdit_email {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.infoUp_box_name33 {
+  height: 35px;
+  color: #6b6b6b;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #8a8a8a;
+  padding: 0 10px;
+  max-width: 100px;
+}
+
+.userEdit_email div:nth-child(2) {
+  margin-left: 0px;
+  display: inline-flex;
+}
+
+.userEdit_email > div:nth-child(2) {
+  display: block;
+}
+
+.userEdit_email div div:nth-child(2) p {
+  margin-top: 10px;
+}
+
+.userEdit_email div div:nth-child(2) {
+  height: 10px;
+}
+
+.infoUp_box_name2 {
+  height: 35px;
+  color: #6b6b6b;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #8a8a8a;
+  padding: 0 10px;
+  margin-bottom: 5px;
+}
+
+.infoUp_box_name2 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.add-btn33 {
+  display: none;
+}
+
+@media (max-width: 1440px) {
+  .infoUp_box_p1 {
+    margin-left: 0px;
+    margin-right: 10px;
+    width: 80px;
+    padding-left: 0px;
+
+  }
+
+  .userEdit_email {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .userEdit_email div div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.userEdit_email {
+  gap: 0px;
+  margin-top: 20px;
+}
+
+.userEdit_email div:nth-child(2) {
+  gap: 0px;
+  margin-top: -10px;
+}
+
+.infoUp_box_name33 {
+  height: 25px;
+  color: #6b6b6b;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #8a8a8a;
+  padding: 0 10px;
+  max-width: 125px;
+  margin-right: -10px;
+}
+
+.userEdit_email button {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.userEdit_email .infoUp_box_name {
+  height: 25px;
+  width: 250px;
+  margin-right: -10px;
+}
+
+}
+
+@media (max-width: 800px) {
+  .userEdit_email .infoUp_box_name {
+    width: 35vw;
+  }
+}
+
+@media (max-width: 690px) {
+  .infoUp_box_address_my input{
+    width: 90%;
+  }
+
+  .add-btn22 {
+    display: none;
+  }
+
+  .add-btn33 {
+  display: block;
+  margin-left: 0px;
+  }
+}
+
+  @media (max-width: 650px) {
+    .infoUp_box_p1 {
+      margin-left: 0px;
+      margin-right: 10px;
+      width: 80px;
+      padding-left: 0px;
+
+    }
+  }
+
+@media (max-width: 450px) {
+  .infoUp_box {
+    display: flex;
+    font-size: 15px;
+    font-weight: 600;
+    align-items: center;
+  }
+
+  .input.infoUp_box_zipcode {
+    width: 90px;
+  }
+
+  .infoUp_box_sbtn {
+    width: 45px;
+    background-color: #0a0a0a;
+  }
+
+  .infoUp_box334 {
+    height: 110px !important;
+  }
+
+  .infoUp_box_sbtn2 {
+    margin-top: 70px;
+    margin-left: -50px;
+    width: 90px;
+  }
+
+  .userEdit_email div:nth-child(1) {
+    margin-top: -15px;
+  }
+
+  .userEdit_email div:nth-child(2) {
+    margin-top: 5px;
+  }
+  .userEdit_email div:nth-child(2) button {
+    height: 25px;
+    width: 80px;
+    margin-right: -20px;
+  }
+  
+  .infoUp_box_name33 {
+    max-width: 100px;
+  }
+}
