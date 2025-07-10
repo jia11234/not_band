@@ -1,0 +1,67 @@
+# 로그 파일 제외
+logs/
+*.log
+
+# 빌드 결과물 제외
+build/
+dist/
+out/
+*.o
+*.class
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Gradle
+.gradle/
+
+# Eclipse Gradle plugin generated files
+# Eclipse Core
+.project
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+# 환경 설정 파일 제외
+.env
+.env.*
+config/local.json
+
+# npm 패키지 디렉터리 제외
+node_modules/ 
+bower_components/
+
+# glb 파일 제외
+*.glb
+3d/*
+
+# IDE 설정 관련 제외
+.vscode/
+.idea/
+*.iml
+.project
+.classpath
+
+# Vite 캐시
+.vite/
+
+# 시스템 파일 제외
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+#.properties 파일 제외
+*.properties
+
+# 기타 실행파일/설치파일 등
+*.exe
+*.msi
+*.cab
+*.msm
+*.msp
+*.zip
+*.tar.gz
+*.war
+*.jar
+*.ear

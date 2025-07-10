@@ -1,0 +1,21 @@
+# 백엔드 빌드 파일 (Gradle 예시)
+.gradle/
+build/
+out/
+
+# 환경 변수, 시크릿키 파일
+*.env
+*.local
+secret.properties
+application.properties
+
+# IDE 설정 파일
+.idea/
+*.iml
+
+# 로그 파일
+*.log
+
+# 운영체제 파일
+.DS_Store
+Thumbs.db

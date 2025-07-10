@@ -1,0 +1,31 @@
+.order_completed_group {
+  margin-top: 100px;
+  height: 100vh;
+}
+
+.order_completed_information {
+  padding: 20px 0px 15px 0px;
+  border-bottom: 1px solid #adadad;
+}
+
+.order_completed_information p {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.order_completed {
+  max-width: 700px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.order_completed button {
+  margin-top: 50px;
+}
+
+@media (max-width: 450px) {
+  .order_completed button {
+    width: calc(100vw - 32px) !important;
+  }
+}

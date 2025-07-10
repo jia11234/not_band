@@ -1,0 +1,148 @@
+.admin_group {
+  min-height: 100vh;
+  margin-top: 0px;
+  background-color: #eeeff0;
+  margin-top: 96px;
+  display: flex;
+  color: #0a0a0a;
+  overflow: hidden;
+}
+
+/* 왼쪽 메뉴 */
+.admin_left_menu_group {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 290px;
+  height: 100vh;
+  margin-top: 98px;
+  background-color: #fcfefd;
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.admin_left_menu {
+  width: 218px;
+  font-weight: 600;
+  margin: 0 auto;
+  margin-top: 45px;
+}
+
+.admin_left_menu a {
+  color: #0a0a0a;
+}
+
+.admin_left_menu p {
+  margin-bottom: 29px;
+  font-size: 23px;
+  cursor: pointer;
+  position: relative;
+}
+
+.admin_left_menu p:hover {
+  color: #ff4a01;
+  .da_user_resell {
+    width: 774px;
+    height: 628px;
+    margin-left: 0px;
+    background-color: #FCFEFD;
+    border-radius: 5px;
+    float: left;
+  }
+}
+
+.admin_left_menu p.active {
+  color: #ff4a01;
+}
+
+/* 내용 구역 */
+.admin_contents_area {
+  margin-left: 303px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.admin_contents_area h1 {
+  font-size: 30px;
+  padding-bottom: 22px;
+  font-weight: 600;
+}
+
+/* 페이징 */
+.page_change3 {
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+  padding-bottom: 70px;
+  margin-left: -17px;
+}
+
+.page_change3 div {
+  display: flex;
+  font-size: 17px;
+  width: 72px;
+  align-items: center;
+  gap: 13px;
+}
+
+.page_change3 button {
+  border: none;
+  background-color: transparent;
+  height: 14px;
+  text-align: center;
+}
+
+.page_change3 p {
+  font-weight: 500;
+  color: #8a8a8a;
+}
+
+/* 헤더 */
+.adminHeader_wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fcfefd;
+  z-index: 999;
+}
+
+.admin_header {
+  width: 290px;
+  margin-left: 0px;
+  height: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin_header img {
+  width: calc(149.52px);
+  height: calc(78.75px);
+}
+
+.admin_header_menu {
+  width: 383px;
+  margin-right: 30px;
+  gap: 31px;
+  display: flex;
+}
+
+.admin_header_menu_content {
+  display: flex;
+  align-items: center;
+}
+
+.admin_header_menu_content img {
+  width: 25px;
+  margin-right: 6px;
+}
+
+.admin_header_menu_content a {
+  color: #0A0A0A;
+}
+
+.admin_header_menu_content p {
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}

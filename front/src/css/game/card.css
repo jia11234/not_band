@@ -1,0 +1,139 @@
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card_game_intro_window {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  z-index: 100;
+  width: 100%;
+}
+
+.card_game {
+  background-image: url("/images/cards/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.cards img {
+  width: 150px;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.timer div {
+  display: flex;
+  gap: 5px;
+  margin-top: -50px;
+  padding-left: 50px;
+}
+
+.timer div img {
+  display: flex;
+  gap: 10px;
+  width: 30px;
+  margin-left: 0px;
+}
+
+.timer img {
+  width: 300px;
+}
+
+@media (max-width: 1560px) {
+  .cards img {
+    width: 7vw;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .card_game {
+    background-image: url("/images/cards/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 1050px) {
+  .cards img {
+    width: 10vw;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .card_game {
+    background-image: url("/images/cards/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards img {
+    width: 20vw;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .card_game {
+    background-image: url("/images/cards/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+  }
+  .card_game_intro_window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px;
+    z-index: 100;
+    width: 100%;
+  }
+}

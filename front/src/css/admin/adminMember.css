@@ -1,0 +1,145 @@
+/* 전체영역 */
+.adminMember_group {
+  width: 1549px;
+  border-radius: 5px;
+  margin-bottom: 60px;
+  background-color: #FCFEFD;
+  color: #0a0a0a;
+}
+
+.adminMember_group h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 26px;
+}
+
+/* 상품관리 */
+.adminMember_top {
+  display: flex;
+  align-items: center;
+  width: 1549px;
+}
+
+.adminMember_top h1 {
+  margin-left: 0px;
+}
+
+/* 상단메뉴이름 + 개수 */
+.adminMember_maintitle {
+  display: flex;
+  align-items: center;
+  padding-top: 26px;
+}
+
+.adminMember_maintitle p {
+  margin-right: 0px;
+  margin-right: 26px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ff4a01;
+}
+
+.adminMember_maintitle p span {
+  color: #0a0a0a;
+}
+
+/* 테이블 */
+.adminMember_group table {
+  width: 1477px;
+  font-size: 17px;
+  font-weight: 500;
+  border-collapse: collapse;
+}
+
+/* 테이블 헤더 */
+.adminMember_titleArea {
+  display: flex;
+  margin-top: 20px;
+  width: 1497px;
+  height: 42px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #eeeff0;
+}
+
+.adminMember_title {
+  display: flex;
+  align-items: center;
+  width: 1477px;
+}
+
+.adminMember_title p:nth-child(1) {
+  width: 270px;
+}
+
+.adminMember_title p:nth-child(2) {
+  width: 443px;
+}
+
+.adminMember_title p:nth-child(3) {
+  width: 264px;
+}
+
+.adminMember_title p:nth-child(4) {
+  width: 264px;
+}
+
+.adminMember_title p:nth-child(5) {
+  width: 236px;
+}
+
+.adminMember_title p {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* 테이블 바디 */
+.adminMember_Tbody {
+  text-align: center;
+  height: 124px;
+  border: 1px;
+  border-bottom: 1px solid #8a8a8a;
+}
+
+.adminMember_Tbody td {
+  height: 124px;
+  min-height: 124px;
+  line-height: 124px;
+}
+
+.adminMember_Tbody img {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.adminMember_Tbody td:nth-child(1) {
+  width: 270px;
+}
+
+.adminMember_Tbody td:nth-child(2) {
+  width: 443px;
+}
+
+.adminMember_Tbody td:nth-child(3) {
+  width: 264px;
+}
+
+.adminMember_Tbody td:nth-child(4) {
+  width: 264px;
+}
+
+.adminMember_Tbody td:nth-child(5) {
+  width: 236px;
+}
+
+.adminMember_Tbody button {
+  width: 62px;
+  height: 25px;
+  background-color: #FCFEFD;
+  border-radius: 5px;
+  border: 1px solid;
+  font-size: 17px;
+  font-weight: 500;
+}

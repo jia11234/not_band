@@ -1,0 +1,81 @@
+.g-all {
+  height: calc(100vh - 40px);
+  background-color: #0a0a0a;
+}
+
+.game_zone {
+  display: flex;
+  flex-direction: column;
+}
+
+.game_title {
+  margin-top: calc(6.5vh);
+  margin-bottom: 2vh;
+}
+
+.game_title img {
+  width: 75vh;
+}
+
+.card_game_Intro {
+  float: right;
+  display: flex;
+  margin-top: 5vh;
+  margin-right: 20vh;
+  flex-direction: column;
+}
+
+.rythm_game_Intro {
+  float: left;
+  clear: both;
+  display: flex;
+  margin-top: calc(9.5vh);
+  margin-left: 20vh;
+  flex-direction: column;
+}
+
+.card_game_Intro > img,
+.rythm_game_Intro > img {
+  width: 85vh;
+}
+
+.card_game_title {
+  display: flex;
+  gap: 1vh;
+  align-items: baseline;
+  margin-top: -18vh;
+}
+
+.rythm_game_title {
+  display: flex;
+  gap: 4vh;
+  align-items: baseline;
+  margin-top: -16vh;
+}
+
+.card_game_title img:nth-child(3),
+.rythm_game_title img:nth-child(1) {
+  height: 12vh;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card_game_title img:nth-child(3):hover,
+.rythm_game_title img:nth-child(1):hover {
+  transform: translateY(calc(-1.5vh));
+}
+
+.card_game_title img:nth-child(2) {
+  height: 14vh;
+}
+
+.card_game_title img:nth-child(1),
+.rythm_game_title img:nth-child(2) {
+  height: 6vh;
+  padding-bottom: 1vh;
+}
+
+.g_bottom img {
+  margin-top: 4vh;
+  width: 100%;
+  max-width: 100%;
+}

@@ -1,0 +1,135 @@
+.mp_R_myprd_menu {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  margin-top: 15px;
+  color: #8a8a8a;
+  /* padding: 0px 104px; */
+}
+
+.mp_R_s_title3 {
+  border-bottom: calc(1.5px) solid #0a0a0a;
+  color: #0a0a0a;
+}
+
+.mp_R_s_title3 p {
+  width: 237.5px;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+  color: #8a8a8a;
+  cursor: pointer;
+}
+
+.menu-item.active {
+  color: #ff4a01;
+  padding-bottom: 16px;
+  margin-bottom: -1px;
+  border-bottom: 2px solid #ff4a01;
+}
+
+.mp_R_myprd_group img:nth-child(1) {
+  width: 90px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.mp_R_myprd_group .mp_R_ws_prd_text {
+  margin-left: 15px;
+}
+
+.mp_R_myprd_group div:nth-child(3) {
+  margin-right: 66px;
+}
+
+.mp_R_myprd_group div:nth-child(3) div:nth-child(1) {
+  width: 103px;
+  height: 26px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  border: 1px solid #0A0A0A;
+  color: #0a0a0a;
+
+}
+
+.mp_R_myprd_group div:nth-child(3) select{
+  width: 103px;
+  height: 26px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff4a01;
+  border: 1px solid #ff4a01;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(/images/mypage/down_ff4a01.png);
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  background-size: 12px 7px;
+}
+
+.resell_state_group select {
+  display: none;
+}
+
+.mp_R_myprd_group button {
+  margin-left: 0px;
+}
+
+.mp_R_myprd_group button img:nth-child(1) {
+  background-color: transparent;
+}
+
+@media (max-width: 650px) {
+  .resell_state_group select {
+    width: 70px;
+    height: 26px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ff4a01;
+    border: 1px solid #ff4a01;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(/images/mypage/down_ff4a01.png);
+    background-repeat: no-repeat;
+    background-position: right 6px center;
+    background-size: 12px 7px;
+    margin-right: 0px;
+  }
+
+  .resell_state_group {
+    margin-top: -35px;
+    margin-bottom: 20px;
+    margin-right: 0px;
+    width: 100%;
+  }
+
+  .mp_R_myprd_group div:nth-child(3) select {
+    display: none;
+  }
+  .mp_R_ws_2222 {
+    width: 200%;
+  }
+
+  .mp_R_s_title3 p {
+    width: 90%;
+    font-size: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+}

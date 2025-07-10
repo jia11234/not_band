@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "Pretendard-Regular";
+        src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+          format("woff");
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      * {
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      body {
+        background: #0a0a0a;
+        height: 2000px;
+      }
+
+      header {
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+      }
+
+      header > div {
+        font-family: "Pretendard-Regular";
+        background: #0a0a0a;
+        height: 100px;
+        width: 100%;
+        display: flex;
+      }
+
+      nav {
+        height: 80px;
+        color: #FCFEFD;
+        font-size: 17px;
+        align-items: end;
+        display: flex;
+        gap: 30px;
+        margin-left: 90px;
+      }
+
+      nav a {
+        color: #FCFEFD;
+      }
+
+      #logo {
+        height: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -100px;
+      }
+
+      #icons_wrap {
+        position: absolute;
+        right: 0;
+      }
+
+      #icons {
+        height: 80px;
+        align-items: end;
+        display: flex;
+        gap: 30px;
+        margin-right: 90px;
+        justify-content: center;
+      }
+
+      #bubble {
+        margin-top: -62px;
+        margin-left: 58px;
+      }
+
+      @media (max-width: 1440px) {
+        nav {
+          margin-left: 50px;
+          font-size: 16px;
+        }
+
+        header div #icons {
+          margin-right: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <nav>
+          <p><a href="">악기&음향기기</a></p>
+          <p><a href="">할인</a></p>
+          <p><a href="">대여</a></p>
+          <p><a href="">커뮤니티</a></p>
+          <p><a href="">게임</a></p>
+          <p><a href="">이벤트</a></p>
+        </nav>
+        <div id="icons_wrap">
+          <div id="icons">
+            <img src="../../images/header/search.png" alt="" />
+            <img src="../../images/header/mypage.png" alt="" />
+            <img src="../../images/header/cart.png" alt="" />
+            <img src="../../images/header/cs.png" alt="" />
+          </div>
+          <div id="bubble">
+            <img src="../../images/header/bubble.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div id="logo">
+        <img src="../../images/header/logo.png" alt="" />
+      </div>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+.prd_group5 {
+  width: 1740px;
+  height: 1200px;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 200px;
+  margin-right: -300px;
+  display: flex;
+  margin-top: 20px;
+}
+
+.prd_post {
+  width: 420px;
+  height: 560px;
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+
+.prd_post img {
+  width: 420px;
+  height: 460px;
+}
+
+.prd_name {
+  margin-top: 5px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.prd_price {
+  width: 420px;
+  height: 50px;
+  font-size: 22px;
+  color: #8a8a8a;
+  display: flex;
+  margin-top: 20px;
+}
+
+.prd_price p {
+  margin-left: 0;
+  color: #0A0A0A;
+}

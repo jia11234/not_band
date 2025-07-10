@@ -1,0 +1,129 @@
+.event {
+    margin-top: 32px;
+    width: 200px;
+    font-size: 35px;
+    font-weight: 500;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    justify-content: center;
+    display: flex;
+    -webkit-text-stroke: 2px #0A0A0A;
+}
+
+.et-bn{
+    max-width: 1360px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+    position: relative;
+}
+
+.ct-mg{
+    margin-bottom: 50px;
+}
+
+.eventSale_btn {
+  position: absolute;
+  bottom: 3%;
+  z-index: 10;
+}
+  
+.eventSale_btn button {
+  width: 400px;
+  height: 70px;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: #E01D10;
+  color: #FCFEFD;
+  border: none;
+  cursor: pointer;
+}
+  
+.eventGame_btn {
+  position: absolute;
+  bottom: 4%;
+  z-index: 10;
+}
+  
+.eventGame_btn button {
+  width: 400px;
+  height: 70px;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: #3dccc5;
+  color: #FCFEFD;
+  border: none;
+  cursor: pointer;
+}
+  
+.eventReview_btn {
+  position: absolute;
+  bottom: 8%;
+  z-index: 10;
+}
+
+.eventReview_btn button {
+  width: 400px;
+  height: 70px;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: #E634A5;
+  color: #FCFEFD;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1440px) {
+  .et-bn{
+    max-width: 90%;
+  }
+  .et-bn img{
+    width: 100%;
+    background-color: #E01D10;
+  }
+
+  .ct-mg{
+      margin-bottom: 4%;
+  }
+
+}
+
+@media (max-width: 850px) {
+  .eventSale_btn, .eventReview_btn {
+      bottom: calc(2.5%);
+  }
+  .eventReview_btn {
+      bottom: calc(7%);
+  }
+}
+
+@media (max-width: 600px) {
+  .eventGame_btn button, .eventSale_btn button, .eventReview_btn button {
+      width: 300px;
+      height: 60px;
+  }
+  .eventReview_btn {
+      bottom: calc(5%);
+  }
+}
+
+@media (max-width: 400px) {
+  .eventGame_btn button, .eventSale_btn button, .eventReview_btn button {
+      width: 250px;
+      height: 50px;
+  }
+  .eventSale_btn {
+      bottom: calc(2%);
+  }
+  .eventReview_btn {
+      bottom: calc(5%);
+  }
+
+  .eventGame_btn {
+      bottom: calc(4%);
+  }
+}
+  

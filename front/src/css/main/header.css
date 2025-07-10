@@ -1,0 +1,553 @@
+header {
+  height: 96px;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+
+header:hover {
+  background-color: #0a0a0a;
+}
+
+header > div {
+  height: 96px;
+  width: 100%;
+  display: flex;
+}
+
+.toggle_menu a{
+  color: #0A0A0A;
+}
+
+nav {
+  height: 96px;
+  align-items: center;
+  display: flex;
+  gap: 30px;
+  margin-left: 90px;
+}
+
+nav a {
+  color: #FCFEFD;
+  position: relative;
+  z-index: 98;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+nav .menu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0%;
+  height: 3px;
+  background-color: #a02225;
+  transition: width 0.3s ease-in-out;
+  z-index: 99;
+}
+
+nav .menu.active::after {
+  width: 100%;
+}
+
+nav .menu:nth-child(1):after, nav .menu:nth-child(1).active::after {
+  background-color: #ff4a01;
+}
+
+nav .menu:nth-child(2):after {
+  background-color: #0371b9;
+}
+
+nav .menu:nth-child(3):after {
+  background-color: #feb33e;
+}
+
+nav .menu:nth-child(4):after {
+  background-color: #7ab04f;
+}
+
+nav .menu:nth-child(5):after {
+  background-color: #ff4a01;
+}
+
+nav .menu:nth-child(6):after {
+  background-color: #0371b9;
+}
+
+nav .menu:nth-child(7):after {
+  background-color: #feb33e;
+}
+
+nav .menu:hover::after {
+  width: 100%;
+}
+
+.logo {
+  height: 96px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -96px;
+}
+
+.logo img {
+  height: 70px;
+}
+
+.icons_wrap {
+  position: absolute;
+  right: 0px;
+}
+
+.icons {
+  height: 96px;
+  align-items: center;
+  display: flex;
+  gap: 25px;
+  margin-right: 90px;
+  justify-content: center;
+}
+
+#cards {
+  display: flex;
+  justify-content: center;
+}
+
+#cardintro {
+  width: 790px;
+  height: 720px;
+  border: 5px solid #0A0A0A;
+  margin-top: calc((100vh - 820px) / 2);
+}
+
+#header_line {
+  position: absolute;
+  top: 96px;
+  left: 0;
+  border-top: 0.5px solid #FCFEFD;
+  height: 220px;
+  width: 100%;
+  z-index: -1;
+  display: none;
+  color: #FCFEFD;
+}
+
+.icons img {
+  width: calc(25.5px);
+  cursor: pointer;
+}
+
+#talk img {
+  width: calc(28.5px);
+  z-index: 44;
+  position: relative;
+  margin-top: -2px;
+}
+
+.new_talk div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff4a01;
+  min-width: 26px;
+  min-height: 26px;
+  border-radius: 24px;
+  color: #fcfefd;
+  font-size: 17px;
+  margin-left: 15px;
+  margin-top: -15px;
+  z-index: 99;
+  position: absolute;
+}
+
+.icons a:nth-child(2) img, .header_search_menu a img {
+  width: calc(26.5px);
+}
+
+.icons a img {
+  margin-bottom: -3px;
+}
+
+.icons > img:nth-child(1) {
+  margin-bottom: -3px;
+}
+
+.s_menu_group {
+  display: flex;
+  float: left;
+  margin-left: 90px;
+}
+
+.s_menu {
+  margin-top: 24px;
+  width: 200px;
+}
+
+.s_menu h4 {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.s_menu p {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 35px;
+}
+
+.s_menu_group .menu_picture {
+  display: flex;
+  align-items: center;
+  height: 250px;
+  gap: 10px;
+}
+
+.s_menu_group .menu_picture img {
+  background-color: #FCFEFD;
+  width: 200px;
+  height: 200px;
+}
+
+.cart_link {
+  margin-bottom: -4px;
+}
+
+#my {
+  height: 26px;
+}
+
+#my_hover {
+  width: 142px;
+  position: absolute;
+  top: calc(60.5px);
+  right: calc(31px);
+  display: none;
+}
+
+#my_hover div {
+  margin-top: calc(35.5px);
+  background-color: #555555;
+  padding-top: 8px;
+  padding-bottom: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#my_hover div p {
+  margin-top: 12px;
+  text-align: center;
+  color: #FCFEFD;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+nav:hover #header_line {
+  display: block;
+}
+
+#my:hover #my_hover {
+  display: block;
+}
+
+#talk {
+  height: 26px;
+}
+
+#talk_hover {
+  width: 142px;
+  position: absolute;
+  top: calc(60.5px);
+  right: calc(84.2px);
+  display: none;
+}
+
+#talk_hover>div{
+  margin-top: calc(35.5px);
+  background-color: #555555;
+  padding-top: 8px;
+  padding-bottom: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+#talk_hover div p {
+  margin-top: 12px;
+  text-align: center;
+  color: #FCFEFD;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#talk_hover div div{
+  position: relative;;
+}
+
+.new_talk2 p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff4a01;
+  min-width: 22px;
+  min-height: 22px;
+  border-radius: 24px;
+  color: #fcfefd;
+  font-size: 15px !important;
+  right: 23px;
+  top: -48px;
+  z-index: 99;
+  position: absolute;
+}
+
+.new_talk3 p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff4a01;
+  min-width: 22px;
+  min-height: 22px;
+  border-radius: 24px;
+  color: #fcfefd;
+  font-size: 15px !important;
+  right: 10px;
+  top: -54px;
+  z-index: 99;
+  position: absolute;
+}
+
+
+#talk:hover #talk_hover {
+  display: block;
+}
+
+.hambuger_menu {
+  display: block;
+}
+
+.hambuger_menu div:nth-child(1) {
+  height: 96px;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0px;
+}
+
+.hambuger_menu div button {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #FCFEFD;
+}
+
+.hambuger_menu .toggle_menu {
+  background-color: #fcfefd;
+  width: 600px;
+  height: 100vh;
+  margin-left: -90px;
+  margin-top: 0px;
+  z-index: 101;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.hambuger_menu div p {
+  color: #0a0a0a;
+}
+
+.login_sign_up_group {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: -16px;
+  height: 20px;
+}
+
+.login_sign_up_group a {
+  font-size: 22px;
+  font-weight: 500;
+  color: #0a0a0a;
+}
+
+.header_menu_group {
+  border-top: 1px solid #8a8a8a;
+  border-bottom: 1px solid #8a8a8a;
+  z-index: 120;
+  padding-top: 18px;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  height: auto;
+}
+
+.shop_submenu {
+  width: 100%;
+  border-top: 1px solid #8a8a8a;
+  border-bottom: 1px solid #8a8a8a;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+}
+
+.shop_submenu a p {
+  margin-left: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #0a0a0a;
+}
+
+.header_menu_group a p {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.login_sign_up_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8a8a8a;
+  margin-top: -5px;
+  margin-bottom: 25px;
+  margin-left: 0px;
+  width: 90px;
+  height: 26px;
+  border: 1px solid #8a8a8a;
+}
+
+.resell_header_toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 35px !important;
+}
+
+.resell_header_toggle div {
+  margin-top: -15px;
+  transform: rotate(90deg); 
+  transition: transform 0.3s ease; 
+}
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.arrow.rotated {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 1100px) {
+  nav {
+    margin-left: 50px;
+  }
+
+
+  .icons {
+    margin-right: 50px;
+  }
+
+  .hambuger_menu .toggle_menu {
+    padding-left: 85px;
+    padding-right: 45px;
+  }
+
+  #talk_hover {
+    right: calc(40px);
+  }
+}
+
+@media (max-width: 650px) {
+  nav {
+    margin-left: 20px;
+    height: 60px;
+    gap: 10px;
+  }
+
+  .icons {
+    margin-right: 20px;
+    height: 60px;
+    gap: 15px;
+  }
+
+  .new_talk div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff4a01;
+    min-width: 20px;
+    min-height: 20px;
+    border-radius: 24px;
+    color: #fcfefd;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-top: -7px;
+    z-index: 99;
+    position: absolute;
+  }
+
+  header {
+    height: 60px;
+  }
+
+  header > div{
+    height: 60px;
+  }
+
+  .logo {
+    height: 60px;
+    width: 100%;
+    margin-top: -60px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .hambuger_menu div:nth-child(1) {
+    height: 60px;
+  }
+
+  .header_search_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header_search_menu img {
+    margin-left: 10px;
+    margin-top: 5.5px;
+  }
+
+  .login_sign_up_group{
+    margin-bottom: 7px;
+    margin-top: 17px;
+  }
+
+  .hambuger_menu .toggle_menu {
+    padding-left: 95px;
+    padding-right: 35px;
+  }
+
+  #talk_hover {
+    top: calc(23.5px);
+    right: calc(0px);
+  }
+}
+
+@media (max-width: 410px) {
+  nav {
+    margin-left: 10px;
+  }
+
+  .icons {
+    margin-right: 10px;
+  }
+
+  .hambuger_menu .toggle_menu {
+    padding-left: 95px;
+    padding-right: 35px;
+  }
+}
