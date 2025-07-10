@@ -1,0 +1,151 @@
+* {
+  font-family: "Pretendard", sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  word-break: keep-all;
+}
+
+body.modal-open {
+  overflow: hidden;
+  padding-right: 17px;
+}
+
+Dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  overflow: hidden;
+  background-color: aqua;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #fcfefd;
+}
+
+main {
+  padding-top: 80px;
+}
+
+.btnWhite {
+  clear: both;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 60px;
+  background-color: #fcfefd;
+  border: 1px solid #0a0a0a;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.btnWhite a {
+  text-decoration: none;
+  color: #0a0a0a;
+}
+
+.btnRed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 60px;
+  margin-top: 22px;
+  background-color: #0a0a0a;
+  color: #fcfefd;
+  font-size: 22px;
+  border: 0px;
+  font-weight: 600;
+}
+
+.btnRed a {
+  text-decoration: none;
+  color: #fcfefd;
+}
+
+.input_simple {
+  width: 400px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #0a0a0a;
+  outline: none;
+  margin-top: 5px;
+  margin-bottom: 7px;
+  font-weight: 600;
+  color: #0A0A0A;
+}
+
+.input_simple:focus {
+  border-bottom: 2px solid #0a0a0a;
+}
+
+@media (max-width: 1440px) {
+  nav {
+    margin-left: 50px;
+    font-size: 16px;
+  }
+
+  .icons_wrap {
+    right: -50px;
+  }
+}
+
+@media (max-width: 650px) {
+  main {
+    padding-top: 60px !important;
+  }
+}
+/*404*/
+.not_found {
+  height: calc(100vh - 320px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 300px;
+  padding-bottom: 400px;
+}
+
+.not_found h1 {
+  font-size: 40px;
+  text-align: center;
+  color: #0a0a0a;
+}
+
+.not_found p:nth-child(1) {
+  font-size: 150px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #8A8A8A;
+}
+
+.not_found p {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.found_btn {
+  width: 400px;
+  min-height: 50px;
+  margin-top: 22px;
+  background-color: #0a0a0a;
+  border: 0px;
+}
+
+.found_btn a {
+  color: #fcfefd;
+  font-size: 22px;
+  border: 0px;
+  font-weight: 600;
+}

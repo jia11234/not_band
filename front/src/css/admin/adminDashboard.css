@@ -1,0 +1,328 @@
+/* 사이트 현황 표시 */
+.dashboard_summary {
+  width: 100%;
+  display: flex;
+  gap: 22px;
+  margin-bottom: 22px;
+}
+
+.da_summary_div {
+  width: 292px;
+  height: 152px;
+  background-color: #FCFEFD;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.da_summary_div p:nth-child(1) {
+  font-size: 55px;
+  font-weight: 600;
+  padding-top: 28px;
+  padding-bottom: 9px;
+}
+
+.da_summary_div p:nth-child(2) {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* 매출 현황 */
+.da_sales {
+  width: 920px;
+  height: 437px;
+  background-color: #FCFEFD;
+  margin-left: 0px;
+  float: left;
+  border-radius: 5px;
+}
+
+.da_div_date_group {
+  margin-right: 21px;
+  display: flex;
+}
+
+.da_div_date {
+  width: 62px;
+  height: 25px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  margin-right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* 인기 상품 */
+.da_best {
+  width: 606px;
+  height: 437px;
+  background-color: #FCFEFD;
+  margin-right: 0px;
+  margin-bottom: 22px;
+  border-radius: 5px;
+}
+
+.da_div_title {
+  margin-left: 26px;
+  padding-top: 26px;
+  display: flex;
+  align-items: center;
+}
+
+.da_div_title p:nth-child(1) {
+  margin-left: 0px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-right: 0px;
+}
+
+.da_div_title p:nth-child(2) {
+  margin-right: 26px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #8a8a8a;
+}
+
+.da_best .da_div_title {
+  margin-bottom: 70px;
+}
+
+.da_best_prd {
+  width: 555px;
+  height: 50px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.da_best_prd h4:nth-child(1) {
+  color: #ff4a01;
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.da_best_prd h4:nth-child(2) {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.da_best_prd div {
+  text-align: right;
+  margin-right: 0px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.da_best_prd div p:nth-child(1) {
+  margin-bottom: 5px;
+}
+
+/* 중고 거래 글 */
+.da_user_resell {
+  width: 774px;
+  height: 628px;
+  margin-left: 0px;
+  background-color: #FCFEFD;
+  border-radius: 5px;
+  float: left;
+}
+
+.da_table_group {
+  width: 722px;
+  height: 910px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-top: 20px;
+}
+
+.da_count_btn {
+  height: 25px;
+  background-color: #ff4a01;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  color: #FCFEFD;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.da_table_title_margin {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #eeeff0;
+}
+
+.da_table_title {
+  width: 702px;
+  height: 42px;
+  display: flex;
+  font-size: 17px;
+  font-weight: 600;
+  color: #0a0a0a;
+  text-align: center;
+  align-items: center;
+}
+
+.da_table_title p:nth-child(1) {
+  width: 90px;
+}
+
+.da_table_title p:nth-child(2) {
+  width: 345px;
+}
+
+.da_table_title p:nth-child(3) {
+  width: 176px;
+}
+
+.da_table_title p:nth-child(4) {
+  width: 91px;
+}
+
+.da_table_group table {
+  width: 702px;
+  font-size: 17px;
+  font-weight: 500;
+  border-collapse: collapse; /* 셀 간 간격 제거 */
+}
+
+.da_table_resell_tr {
+  height: 124px;
+  margin-top: 0px;
+  text-align: center;
+  border-radius: 5px;
+  border-bottom: 1px solid #8a8a8a;
+}
+
+.da_table_resell_tr td:nth-child(1) {
+  width: 90px;
+  padding-top: 17px;
+  padding-bottom: 13px;
+  /* 이유모를 4px로 17-4한 값입니다... */
+}
+
+.da_table_resell_tr td:nth-child(1) img {
+  width: 90px;
+  height: 90px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.da_table_resell_tr td:nth-child(2) {
+  width: 345px;
+  padding: 0px 20px;
+}
+
+.da_table_resell_tr td:nth-child(3) {
+  width: 176px;
+  padding: 0px 30px;
+}
+
+.da_table_resell_tr td:nth-child(4) {
+  width: 91px;
+}
+
+/* 1:1문의 톡 */
+.da_oneonone_talk {
+  width: 752px;
+  height: 628px;
+  float: right;
+  background-color: #FCFEFD;
+  border-radius: 5px;
+}
+
+.da_review_title {
+  width: 700px;
+  height: 42px;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #eeeff0;
+  margin-top: 20px;
+}
+
+.da_review_title_text {
+  width: 680px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.da_review_title_text p:nth-child(1) {
+  width: 100px;
+}
+
+.da_review_title_text p:nth-child(2) {
+  width: 362px;
+}
+
+.da_review_title_text p:nth-child(3) {
+  width: 75px;
+}
+
+.da_review_title_text p:nth-child(4) {
+  width: 97px;
+}
+
+.da_review_title_text p:nth-child(5) {
+  width: 46px;
+}
+
+.da_oneonone_talk table {
+  width: 680px;
+  text-align: center;
+  border-collapse: collapse; /* 셀 간 간격 제거 */
+}
+
+.da_review_text_table {
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #8a8a8a;
+}
+
+.da_review_text_table td {
+  height: 60px;
+}
+
+.da_review_text_table td:nth-child(1) {
+  width: 100px;
+}
+
+.da_review_text_table td:nth-child(2) {
+  width: 362px;
+  padding: 0px 20px;
+  height: 60px;
+}
+
+.da_review_text_table td:nth-child(3) {
+  width: 75px;
+}
+
+.da_review_text_table td:nth-child(4) {
+  width: 97px;
+  height: 60px;
+}
+
+.da_review_text_table td:nth-child(4) img {
+  width: 20px;
+  margin-right: 4px;
+}
+
+.da_review_text_table td:nth-child(5) {
+  width: 46px;
+}

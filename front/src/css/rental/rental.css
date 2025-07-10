@@ -1,0 +1,231 @@
+.resell_gruop {
+  width: 100%;
+  padding-top: 20px;
+  justify-content: center;
+  position: relative;
+  margin-top: 100px;
+}
+
+.resell_gruop h1 {
+  margin-left: 90px;
+}
+
+.resell_top {
+  margin-top: 30px;
+  margin-bottom: 35px;
+}
+
+.resell_top h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.resell_top hr {
+  color: #b4b4b4;
+}
+
+.resell_top hr:nth-child(2) {
+  margin-top: 50px;
+}
+
+.resell_smenu {
+  margin-top: 105px;
+  display: flex;
+  font-size: 18px;
+  color: #8a8a8a;
+  margin-bottom: 15px;
+  gap: 5px;
+  width: 900px !important;
+}
+
+.resell_smenu span {
+  width: 10px;
+  margin-left: -300px;
+  margin-right: -300px;
+}
+
+.resell_smenu b {
+  height: 20px;
+  width: 100px !important;
+  text-align: center;
+}
+
+.resell_smenu p {
+  height: 20px;
+  width: 100px !important;
+  text-align: center;
+}
+
+.resell_menu p:hover {
+  font-weight: 700;
+  color: #0A0A0A;
+  cursor: pointer;
+}
+
+.resell_smenu p:hover {
+  font-weight: 700;
+  color: #0A0A0A;
+  cursor: pointer;
+}
+
+.prdSht {
+  width: 1740px;
+}
+
+.prdSht div {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  font-size: 18px;
+  margin-right: 0px;
+  width: 100px;
+  align-items: center;
+}
+
+.prdSht button {
+  border: none;
+  background-color: transparent;
+}
+
+.prd_group {
+  width: 1740px;
+  height: 1200px;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 200px;
+}
+
+.prd_post {
+  width: 420px;
+  height: 560px;
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+
+.prd_post img {
+  width: 420px;
+  height: 460px;
+}
+
+.hstag {
+  display: flex;
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.hstag p:nth-child(1) {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+.hstag p:nth-child(2) {
+  margin-left: 0px;
+}
+.hstag p:nth-child(3) {
+  margin-right: 5px;
+  color: #b4b4b4;
+}
+
+.prd_name {
+  margin-top: 5px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.prd_price {
+  width: 420px;
+  height: 50px;
+  font-size: 22px;
+  color: #8a8a8a;
+  display: flex;
+  margin-top: 20px;
+}
+
+.prd_price p {
+  margin-left: 0;
+  color: #0A0A0A;
+}
+
+.eye {
+  width: 23px;
+  height: 23px;
+  margin-right: 5px;
+  background-position: center;
+  background-image: url(/images/resell/eye.png);
+  background-repeat: no-repeat;
+}
+
+.h {
+  width: 23px;
+  height: 23px;
+  margin-left: 10px;
+  margin-right: 5px;
+  background-position: center;
+  background-image: url(/images/resell/h.png);
+  background-repeat: no-repeat;
+}
+
+.talk {
+  width: 23px;
+  height: 23px;
+  margin-left: 10px;
+  margin-right: 5px;
+  background-position: center;
+  background-image: url(/images/resell/talk.png);
+  background-repeat: no-repeat;
+}
+
+.resell_bottom {
+  display: flex;
+  width: 150px;
+  font-size: 22px;
+  color: #bababa;
+  margin-bottom: 250px;
+}
+
+.resell_bottom p:hover {
+  font-weight: 700;
+  color: #0A0A0A;
+  cursor: pointer;
+}
+
+.right_btn {
+  width: 55px;
+  height: 100px;
+  position: absolute;
+  top: 800px;
+  right: 15px;
+  position: fixed;
+}
+
+.up {
+  width: 55px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/images/resell/up.png);
+  cursor: pointer;
+}
+
+.clock {
+  width: 55px;
+  height: 50px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/images/resell/clock.png);
+}
+
+.resell_bottom {
+  display: flex;
+  font-size: 17px;
+  width: 72px;
+  align-items: center;
+  gap: 13px;
+}
+.resell_bottom button {
+  border: none;
+  background-color: transparent;
+  height: 14px;
+  text-align: center;
+}

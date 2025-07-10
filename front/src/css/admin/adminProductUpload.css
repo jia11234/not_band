@@ -1,0 +1,38 @@
+.prdup_checkbox {
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+  width: 62px;
+  margin-bottom: 15px;
+}
+
+.prdup_checkbox input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  accent-color: #0a0a0a;
+  border: 1px solid #0a0a0a;
+  cursor: pointer;
+  background-color: #0a0a0a;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.prdup_sale_text {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.da_prd_group {
+  background-color: #FCFEFD;
+  width: 752px;
+  margin-left: 398px;
+  margin-top: -95px;
+}
+
+.product_new_category {
+  display: inline-flex;
+}
+
+.product_new_category div {
+  width: 200px;
+}

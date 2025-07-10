@@ -1,0 +1,145 @@
+#login {
+  margin-top: -4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh);
+}
+
+#login form {
+  padding: 65px;
+  background-image: url("/images/login/login_box.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#login form h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+#login form .login_title {
+  font-size: 22px;
+  color: #a02225;
+  font-weight: 500;
+}
+
+#login form b {
+  color: #0a0a0a;
+}
+
+.message {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #a02225;
+}
+
+.find {
+  float: right;
+  display: flex;
+  font-size: 16px;
+  width: 200px;
+  height: 21px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #8A8A8A;
+  margin-top: 0px;
+}
+
+.find a {
+  color: #8A8A8A;
+  text-decoration: none;
+}
+
+.find a:hover {
+  color: #ff4a01;
+}
+
+.signup_clear {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup_clear p {
+  font-size: 22px;
+  color: #a02225;
+  font-weight: 500;
+}
+
+.signup_clear h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.message .material-symbols-outlined {
+  font-size: 20px;
+  vertical-align: text-bottom;
+  color: #fa4257;
+  font-weight: 500;
+}
+
+.sns {
+  margin-top: 35px;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+
+.sns p {
+  margin-bottom: 20px;
+  color: #8A8A8A;
+}
+.sns div {
+  display: flex;
+  gap: 25px;
+}
+
+@media (max-width: 600px) {
+  #login form {
+    background-image: none;
+  }
+}
+
+@media (max-width: 410px) {
+  #login .input_simple {
+    width: 100%;
+    display: flex;
+  }
+  #login .login_title {
+    width: 100%;
+  }
+
+  .find2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .find {
+    display: flex;
+  }
+
+  #login .find2 {
+    width: 100%;
+  }
+  #login .btnWhite {
+   width: 100%;
+  }
+  #login .btnRed {
+   width: 100%;
+  }
+  .sns p{
+    text-align: center;
+  }
+}

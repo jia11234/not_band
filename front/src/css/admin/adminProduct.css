@@ -1,0 +1,190 @@
+/* 전체영역 */
+.adminProduct_group {
+  width: 1549px;
+  border-radius: 5px;
+  margin-bottom: 100px;
+  background-color: #FCFEFD;
+  color: #0a0a0a;
+}
+
+.adminProduct_group h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 26px;
+}
+
+/* 상품관리 */
+.adminProduct_top {
+  display: flex;
+  align-items: center;
+  width: 1549px;
+}
+
+.adminProduct_top h1 {
+  margin-left: 0px;
+}
+
+.adminProduct_top div {
+  margin-right: 0px;
+}
+
+.adminProduct_top button {
+  width: 80px;
+  height: 30px;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  color: #FCFEFD;
+  background-color: #ff4a01;
+  cursor: pointer;
+}
+
+/* 상단메뉴이름 + 개수 */
+.adminProduct_maintitle {
+  display: flex;
+  align-items: center;
+  padding-top: 26px;
+}
+
+.adminProduct_maintitle p {
+  margin-right: 0px;
+  margin-right: 26px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ff4a01;
+}
+
+.adminProduct_maintitle p span {
+  color: #0a0a0a;
+}
+
+/* 테이블 */
+.adminProduct_group table {
+  width: 1477px;
+  font-size: 17px;
+  font-weight: 500;
+  border-collapse: collapse;
+}
+
+/* 테이블 헤더 */
+.adminProduct_titleArea {
+  display: flex;
+  margin-top: 20px;
+  width: 1497px;
+  height: 42px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #eeeff0;
+}
+
+.adminProduct_title {
+  display: flex;
+  align-items: center;
+  width: 1477px;
+}
+
+.adminProduct_title p:nth-child(1) {
+  width: 90px;
+}
+
+.adminProduct_title p:nth-child(2) {
+  width: 709px;
+}
+
+.adminProduct_title p:nth-child(3) {
+  width: 178px;
+}
+
+.adminProduct_title p:nth-child(4) {
+  width: 122px;
+}
+
+.adminProduct_title p:nth-child(5) {
+  width: 129px;
+}
+
+.adminProduct_title p:nth-child(6) {
+  width: 154px;
+}
+
+.adminProduct_title p:nth-child(7) {
+  width: 95px;
+  text-align: right;
+  padding-right: 16px;
+}
+
+.adminProduct_title p {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* 테이블 바디 */
+.adminProduct_Tbody {
+  text-align: center;
+  height: 124px;
+  border: 1px;
+  border-bottom: 1px solid #8a8a8a;
+}
+
+.adminProduct_Tbody td {
+  height: 124px;
+  min-height: 124px;
+  line-height: 124px;
+}
+
+.adminProduct_Tbody img {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.adminProduct_Tbody td:nth-child(1) {
+  width: 90px;
+}
+
+.adminProduct_Tbody td:nth-child(2) {
+  width: 709px;
+}
+
+.adminProduct_Tbody td:nth-child(3) {
+  width: 178px;
+}
+
+.adminProduct_Tbody td:nth-child(4) {
+  width: 122px;
+}
+
+.adminProduct_Tbody td:nth-child(5) {
+  width: 129px;
+}
+
+.adminProduct_Tbody td:nth-child(6) {
+  width: 154px;
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+}
+
+.adminProduct_Tbody td:nth-child(6) img {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+}
+
+.adminProduct_Tbody td:nth-child(7) {
+  width: 95px;
+  text-align: right;
+}
+
+.adminProduct_Tbody button {
+  width: 62px;
+  height: 25px;
+  background-color: #FCFEFD;
+  border-radius: 5px;
+  border: 1px solid;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+}

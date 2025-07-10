@@ -1,0 +1,157 @@
+.reviewcon_group {
+  margin-top: 38px;
+}
+
+.reviewcon_star_flex {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.reviewcon_star_flex p:nth-child(1) {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.reviewcon_star_flex p:nth-child(2) {
+  margin-left: 15px;
+  font-weight: 500;
+  font-size: 17px;
+  color: #8a8a8a;
+}
+
+.reviewcon_text {
+  margin-left: 0px;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 17px;
+  max-width: 900px;
+}
+
+.reviewcon_more-btn {
+  width: 50px;
+  cursor: pointer;
+  margin-top: 5px;
+  color: #8a8a8a;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 0px;
+}
+
+.reviewcon_option {
+  font-size: 17px;
+  font-weight: 500;
+  color: #8a8a8a;
+}
+
+.reviewcon_change {
+  width: 103px;
+  height: 26px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  border: 1px solid #0A0A0A;
+  color: #0a0a0a;
+  margin-bottom: 60px;
+  position: absolute;
+  top: 23px;
+  right: 50px;
+}
+
+.reviewcon_del_btn {
+  width: 2px;
+  height: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 24px;
+  right: 9px;
+}
+
+.review_extra_images {
+  display: flex;
+  margin-top: 10px;
+  width: 890px;
+  margin-left: 0px;
+}
+
+.reviewcon_img {
+  width: 90px;
+  height: 90px;
+  margin-right: 10px;
+  margin-left: 0px;
+}
+
+.reviewcon_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.reviewcon_select {
+  margin-left: 10px;
+  width: 103px;
+  height: 26px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0a0a0a;
+  text-align: center;
+  border: 1px solid #0a0a0a;
+}
+
+.mp_R_s_title p:nth-child(3) {
+  margin-right: 15px;
+  color: #0A0A0A;
+  font-size: 18px;
+}
+
+/* 페이징 */
+.review_pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.review_pagination button {
+  color: #8a8a8a;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  background-color: #FCFEFD;
+  font-weight: 500;
+  margin-left: 0px;
+  margin-right: 13px;
+}
+
+.review_pagination .active-page {
+  color: #0A0A0A;
+  font-weight: 600;
+}
+
+.reviewcon_change2 {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .reviewcon_change {
+    display: none;
+  }
+
+  .reviewcon_change2 {
+    width: 103px;
+    height: 26px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border: 1px solid #0A0A0A;
+    color: #0a0a0a;
+    margin-left: 0px;
+  }
+}

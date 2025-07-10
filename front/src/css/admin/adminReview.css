@@ -1,0 +1,11 @@
+.admin_reviewcon_option {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    margin-top: 33px;
+    margin-left: 0px;
+}
+
+.admin_reviewcon_option img {
+    margin-right: 3px !important;
+    background-color: none !important;
+}

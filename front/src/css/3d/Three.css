@@ -1,0 +1,318 @@
+.threeD_menu_bg {
+  margin-top: -3vh;
+  background-image: url(/images/main/background2.png);
+  background-size: cover;
+  background-position: auto center;
+  height: calc(100vh);
+  display: flex;
+}
+
+.threed {
+  position: relative;
+  width: 100%;
+  height: calc(100vh);
+  background: radial-gradient(circle at center, #acb3b8 5%, #273748 100%);
+  overflow: hidden;
+}
+
+.ui {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  z-index: 10;
+  pointer-events: auto;
+  color: #FCFEFD;
+}
+
+.mode-buttons {
+  margin-top: 0;
+  text-align: center;
+  z-index: 998;
+}
+
+.mode-buttons button {
+  margin: 0 5px;
+  margin-bottom: 10px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: none;
+  background-color: #FCFEFD; 
+  color: #0a0a0a;           
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mode-buttons button:hover {
+  background-color: #e6e6e6;
+  font-weight: bold;
+}
+
+.mode-buttons button.active {
+  background-color: #0a0a0a; 
+  color: #FCFEFD;          
+  font-weight: bold;
+}
+
+.play-type-buttons button {
+  margin: 0 5px;
+  margin-bottom: 10px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: none;
+  background-color: #d3d3d3;
+  color: #0A0A0A;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.play-type-buttons button.active {
+  background-color: #ff4a01;
+  color: #FCFEFD;
+  font-weight: bold;
+}
+
+.play-type-buttons button:not(.active):hover {
+  background-color: #bbbbbb;
+}
+
+.info-block {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  text-align: left;
+  max-width: 700px;
+  color: #FCFEFD;
+  z-index: 10;
+}
+
+.ui h1 {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.ui p {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #FCFEFD;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: none;
+  background-color: #0a0a0a;
+  color: #FCFEFD;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #444;
+}
+
+.info-image {
+  width: 340px;
+}
+
+.instrument-info  img{
+  width: 50%;
+}
+
+/* ───────────── 1350px ───────────── */
+@media (max-width: 1350px) {
+  .mode-buttons {
+    margin-top: 10px;
+  }
+
+  .info-block {
+    top: 10px;
+    left: 10px;
+    max-width: 90%;
+  }
+
+  .ui h1 {
+    font-size: 30px;
+  }
+
+  .ui p {
+    font-size: 22px;
+  }
+
+  .info-image {
+    width: 300px;
+  }
+
+  .instrument-info  img{
+    display: none;
+}
+}
+
+@media (width: 1280px) {
+  .mode-buttons {
+  margin-top: 10;
+  text-align: center;
+}
+
+  .info-image {
+    display: none;
+  }
+
+  .instrument-info  img{
+    display: none;
+}
+
+}
+
+
+/* ───────────── 1170px ───────────── */
+@media (max-width: 1170px) {
+  .mode-buttons {
+    margin-top: 10px;
+  }
+
+  .info-block {
+    top: 10px;
+    left: 10px;
+    max-width: 90%;
+  }
+
+  .ui h1 {
+    font-size: 26px;
+  }
+
+  .ui p {
+    font-size: 20px;
+  }
+
+  .info-image {
+    width: 250px;
+  }
+  .instrument-info  img{
+  width: 30%;
+}
+
+}
+
+/* ───────────── 1040px ───────────── */
+@media (max-width: 1040px) {
+  .mode-buttons {
+    margin-top: 10px;
+  }
+
+  .info-block {
+    top: 10px;
+    left: 10px;
+    max-width: 90%;
+  }
+
+  .ui h1 {
+    font-size: 22px;
+  }
+
+  .ui p {
+    font-size: 20px;
+  }
+
+  .info-image {
+    width: 250px;
+  }
+
+.instrument-info  img{
+  width: 30%;
+}
+
+}
+
+/* ───────────── 850px ───────────── */
+@media (max-width: 890px) {
+  .mode-buttons {
+    margin-top: 8px;
+  }
+
+  .mode-buttons button {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .info-block {
+    top: 8px;
+    left: 8px;
+    max-width: 95%;
+  }
+
+  .ui h1 {
+    font-size: 20px;
+  }
+
+  .ui p {
+    font-size: 18px;
+  }
+
+  .info-image {
+    display: none;
+  }
+
+  .instrument-info  img{
+    display: none;
+}
+}
+
+/* ───────────── 800px 이하 ───────────── */
+@media (max-width: 800px) {
+  .mode-buttons {
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  .mode-buttons button {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+
+  .info-block {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-top: 16px;
+    max-width: 95%;
+    text-align: center;
+  }
+
+  .ui h1 {
+    font-size: 22px;
+  }
+
+  .ui p {
+    font-size: 20px;
+  }
+
+  .info-image {
+    display: none;
+  }
+}
+
