@@ -316,13 +316,13 @@ export default function MypageUserEdit() {
     if (name === "password") {
       let newMessage = { ...message };
 
-      const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]{8,13}$/;
+      const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,13}$/;
 
       if (passwordRegex.test(value)) {
         newMessage.password = "";
       } else {
         newMessage.password =
-          "비밀번호는 8-13글자 사이, 영어와 숫자를 섞어야 합니다";
+          "비밀번호는 8-13글자 사이, 영어와 숫자 및 특수 문자를 섞어야 합니다";
       }
 
       setMessage(newMessage);
@@ -439,9 +439,9 @@ export default function MypageUserEdit() {
       if (field === "passwordNew") {
         if (data.password === "") {
           newMessage.password = "새 비밀번호를 입력해주세요";
-        } else if (!/^(?=.*[a-zA-Z])(?=.*[0-9]).{8,13}$/.test(data.password)) {
+        } else if (!/^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,13}$/.test(data.password)) {
           newMessage.password =
-            "비밀번호는 8-13글자 사이, 영어와 숫자를 섞어야 합니다";
+            "비밀번호는 8-13글자 사이, 영어와 숫자 및 특수 문자를 섞어야 합니다";
         } else if (data.password2 === "") {
           newMessage.password2 = "비밀번호 재확인해주세요";
         } else if (data.password !== data.password2) {
