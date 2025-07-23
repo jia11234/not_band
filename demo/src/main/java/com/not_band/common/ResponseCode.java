@@ -7,6 +7,7 @@ public interface ResponseCode {
     String DUPLICATE_ID = "DI";
 
     String SIGN_IN_FAIL = "SF";
+    String SIGN_IN_TYPE = "ST";
     String CERTIFICATION_FAIL = "CF";
     
     String MAIL_FAIL = "MF";

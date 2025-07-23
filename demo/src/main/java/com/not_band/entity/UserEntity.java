@@ -27,7 +27,7 @@ import lombok.Setter;
 public class UserEntity {
 
     @Id
-    @Column(name = "memId")  // 명시적으로 컬럼명을 지정
+    @Column(name = "memId")
     private String memId;
     
     @Column(name = "memPasswd")
@@ -106,7 +106,7 @@ public class UserEntity {
 
     public UserEntity (String memId, String memEmail, String type) {
         this.memId = memId;
-        this.memPasswd = "pAssWord";
+        this.memPasswd = "pAssWord"; //OAuth 로그인일 경우
         this.memName = "user";
         this.memPhone = "user_phone";
         this.memEmail = memEmail;
@@ -125,7 +125,7 @@ public class UserEntity {
 
     public UserEntity(UpdateUserRequestDto dto) {
         if (dto.getPassword() != null && !dto.getPassword().isEmpty()) {
-            this.memPasswd = dto.getPassword();  // 비밀번호 설정
+            this.memPasswd = dto.getPassword(); 
         }
         this.memName = dto.getName();
         this.memNick = dto.getNickName();
@@ -135,7 +135,7 @@ public class UserEntity {
         this.memAddress = dto.getAddress();
         this.memDetailAddress = dto.getDetailAddress();
         this.memBuilding = dto.getBuilding();
-        this.type = "app";  // 기본값 설정
-        this.role = "ROLE_USER";  // 기본값 설정
+        this.type = "app";  
+        this.role = "ROLE_USER";  
     }
 }
