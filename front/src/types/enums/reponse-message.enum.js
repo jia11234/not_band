@@ -9,7 +9,6 @@ const ResponseMessage = {
 
   MAIL_FAIL: "Mail send failed",
   DATABASE_ERROR: "Database error.",
-  SIGN_IN_TYPE: "Login type mismatch.",
 };
 
 export default ResponseMessage;
