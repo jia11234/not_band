@@ -33,4 +33,10 @@ public class SignInResponseDto extends ResponseDto{
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(responseBody);
     } 
 
+    public static ResponseEntity<ResponseDto> signInType (String userType) {
+        String typeMessage = userType + "로 가입된 정보가 있습니다. 확인 후 다시 로그인해 주세요 ";
+        ResponseDto responseBody = new ResponseDto(ResponseCode.SIGN_IN_TYPE, typeMessage);
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(responseBody);
+    }
+
 }

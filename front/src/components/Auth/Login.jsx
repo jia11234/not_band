@@ -3,7 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../../css/main/index.css";
 import "../../css/auth/login.css";
-import { ResponseCode } from "../../types/enums";
+import { ResponseCode, ResponseMessage } from "../../types/enums";
+import { ResponseDto } from "../../apis/response";
 import { signInRequest, SNS_SIGN_IN_URL } from "../../apis";
 import { useCookies } from "react-cookie";
 
@@ -34,6 +35,9 @@ export default function Login() {
     const { code, role } = responseBody; // role을 응답에서 가져옴
     if (code === ResponseCode.VALIDATION_FAIL)
       alert("아이디와 비밀번호를 입력하세요");
+    if (code === ResponseCode.SIGN_IN_TYPE) {
+      alert(responseBody.message);
+    }
     if (code === ResponseCode.SIGN_IN_FAIL) {
       console.log("일치 노논함");
       setMessage({

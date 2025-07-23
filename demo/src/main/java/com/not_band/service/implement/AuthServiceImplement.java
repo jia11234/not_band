@@ -179,10 +179,20 @@ public class AuthServiceImplement implements AuthService{
             UserEntity userEntity = userRepository.findByMemId(userId);
             if (userEntity == null) return SignInResponseDto.signInFail();
     
+            String userType = userEntity.getType();
             String password = dto.getPassword();
             String encodePassword = userEntity.getMemPasswd();
             boolean isMatched = passwordEncoder.matches(password, encodePassword);
-            if (!isMatched) return SignInResponseDto.signInFail();
+            if (userType.equals("kakao")) {
+                return SignInResponseDto.signInType(userType);
+            } else if (userType.equals("naver")) {
+                return SignInResponseDto.signInType(userType);
+            }
+            else {
+                if (!isMatched) {
+                    return SignInResponseDto.signInFail();
+                }
+            }
     
             token = jwtProvider.create(userId);
             
@@ -412,37 +422,37 @@ public class AuthServiceImplement implements AuthService{
 
     //회원 탈퇴
     @Transactional
-@Override
-public ResponseEntity<?> deleteUser(String memId) {
-    try {
-        UserEntity user = userRepository.findByMemId(memId);
-        if (user == null) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("회원이 존재하지 않습니다.");
+    @Override
+    public ResponseEntity<?> deleteUser(String memId) {
+        try {
+            UserEntity user = userRepository.findByMemId(memId);
+            if (user == null) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("회원이 존재하지 않습니다.");
+            }
+        
+            deleteRelatedData(memId);
+        
+            userRepository.delete(user);
+        
+            return ResponseEntity.ok("회원 탈퇴가 완료되었습니다.");
+        
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("서버 오류가 발생했습니다.");
         }
-    
-        deleteRelatedData(memId);
-    
-        userRepository.delete(user);
-    
-        return ResponseEntity.ok("회원 탈퇴가 완료되었습니다.");
-    
-    } catch (Exception e) {
-        e.printStackTrace();
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("서버 오류가 발생했습니다.");
     }
-}
-//회원 탈퇴시 같이 삭제되는 목록들
-private void deleteRelatedData(String memId) {
-    wishRepository.deleteByMemId(memId);
-    inquiryMessageRepository.deleteBySenderId(memId);
-    chatMessageRepository.deleteBySenderId(memId);
-    chatRepository.deleteByMemId1(memId);
-    chatRepository.deleteByMemId2(memId);
-    inquiryRepository.deleteByMemId(memId);
-    reviewRepository.deleteByMemId(memId);
-    orderRepository.deleteByMemId(memId);
-    resellRepository.deleteByMemId(memId);
-}
+    //회원 탈퇴시 같이 삭제되는 목록들
+    private void deleteRelatedData(String memId) {
+        wishRepository.deleteByMemId(memId);
+        inquiryMessageRepository.deleteBySenderId(memId);
+        chatMessageRepository.deleteBySenderId(memId);
+        chatRepository.deleteByMemId1(memId);
+        chatRepository.deleteByMemId2(memId);
+        inquiryRepository.deleteByMemId(memId);
+        reviewRepository.deleteByMemId(memId);
+        orderRepository.deleteByMemId(memId);
+        resellRepository.deleteByMemId(memId);
+    }
 
 //게임 참가여부
     @Transactional

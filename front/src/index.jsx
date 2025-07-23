@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
+import { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Main/Header.jsx";
 import Footer from "./components/Main/Footer.jsx";
@@ -64,9 +65,9 @@ const AppLayout = () => {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <Suspense>
     <BrowserRouter>
       <AppLayout />
     </BrowserRouter>
-  </React.StrictMode>,
+  </Suspense>,
 );
