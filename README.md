@@ -44,19 +44,12 @@
 - Spring Data JPA
 - WebSocket / Stomp
 - MySQL
-- Gradle, Swagger
+- Gradle
 
 ### Frontend
 - React 18 (Vite)
-- JavaScript, Axios, Zustand
-- Material UI
-- React Three Fiber / Three.js
-- StompJS / SockJS
-
-### DevOps & Tools
-- Docker / Docker Compose
-- Git / GitHub
-- Postman / VSCode
+- JavaScript, Axios
+- Three.js
 
 <br/>
 
