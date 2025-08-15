@@ -1,13 +1,7 @@
-# 🎵 Not_Band: 3D 악기 체험 커머스 & 커뮤니티 플랫폼
+# 🎵 NOT_BAND 
+![Not_Band Mockup](https://github.com/user-attachments/assets/983e9acb-d67b-47d6-a954-e7b894ea24b0)
 
-<p align="left">
-  <img src="https://github.com/user-attachments/assets/259766c8-1abf-4a7c-b64b-5656d5ab85e1" alt="Not_Band Logo" width="100"/>
-</p>
 
-> **음악 장비 커머스**, **중고 거래**, **실시간 채팅**,  
-> 3D 악기 체험**을 결합한 웹 프로젝트입니다.
-
-<br/>
 
 ## 📍 주요 기능 (Key Features)
 
@@ -33,6 +27,8 @@
 
 - **관리자 페이지**  
   상품/회원/주문 데이터 관리 전용 대시보드 구현
+
+
 
 <br/>
 
