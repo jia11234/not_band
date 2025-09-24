@@ -1,14 +1,54 @@
 # <h1>🎵 NOT_BAND </h1>
 ![Not_Band Mockup](https://github.com/user-attachments/assets/983e9acb-d67b-47d6-a954-e7b894ea24b0)
 
+## 🗂️  폴더 구성
 
+## 📁 백엔드 (`demo`)
+`demo/src/main/java/com/not_band`
+
+- `config` : CORS, 보안 설정, JWT 등 프로젝트 전반 설정  
+- `controller` : 클라이언트 요청 처리 및 Service 전달  
+- `dto` : API 요청/응답 데이터 구조 정의  
+- `entity` : DB 테이블과 매핑되는 클래스  
+- `repository` : JPA를 이용한 CRUD 및 DB 접근 로직  
+- `service` : 비즈니스 로직 처리 및 데이터 가공  
+
+## 📁 프론트엔드 (`front`)
+`front`
+### 주요 폴더
+-  `src/apis/index.js` : ✔️모든 API 함수 정리
+- `src/components` : 기능별 JSX 컴포넌트  
+  - `3D` : 3D 악기 체험 메뉴  
+  - `Admin` : 관리자 기능  
+  - `Auth` : 로그인/회원가입, 검색  
+  - `Cart` : 장바구니  
+  - `Chat` : 채팅  
+  - `Cs` : 고객센터  
+  - `Event` : 이벤트  
+  - `Game` : 게임  
+  - `Inquiry` : 문의  
+  - `Main` : 메인 페이지, 헤더/푸터  
+  - `Mypage` : 마이페이지  
+  - `Order` : 주문  
+  - `Resell` : 중고 마켓  
+  - `Review` : 리뷰  
+  - `Instrument` : 상품 조회  
+
+- `src/components` : 위와 같이 기능별 CSS폴더
+
+### 정적 파일 (`public`)
+- `3D` : glb 모델과 3D 악기 체험 이미지  
+- `images` : 기능별 이미지 폴더  
+- `music` : 악기 소리 파일
+
+  <br>
 
 ## 📍 주요 기능 (Key Features)
 
 - **3D 악기 체험**<br>
   초보자가 자유롭게 악기를 체험할 수 있도록 만든 메뉴이며 각 악기는 초보자들에게 잘 팔리는 상품 및 판매하는 상품으로 모델링했습니다.<br>
-  WebGL 기반 3D 악기 모델(일렉, 베이스, 키보드, 드럼)을 렌더링하여,
-  사용자가 직접 회전/확대하며 악기를 살펴보는 구경모드와 직접 연주가 가능한 연주 모드가 있습니다.
+  WebGL 기반 3D 악기 모델(일렉, 베이스, 키보드, 드럼)을 렌더링하여,<br>
+  사용자가 직접 회전/확대하며 악기를 살펴보는 **구경모드**와 직접 연주가 가능한 **연주 모드**가 있습니다.
   악기 별로 연주 모드 기능이 다릅니다.
   -  일렉 : 노트 모드, 코드 모드가 있고 코드 모드는 해당 코드를 누르면 동시에 울리며 조율된 소리가 출력됩니다.
   - 베이스 : 노트 모드, 코드 모드가 있고 코드 모드는 조율된 소리가 출력됩니다.
