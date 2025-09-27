@@ -1,5 +1,5 @@
 # <h1>🎵 NOT_BAND </h1>
-![Not_Band Mockup](https://github.com/user-attachments/assets/983e9acb-d67b-47d6-a954-e7b894ea24b0)
+![Not_Band Mockup](https://github.com/jia11234/not_band/blob/main/gif/overview.jpg)
 
 ## 🗂️  폴더 구성
 
