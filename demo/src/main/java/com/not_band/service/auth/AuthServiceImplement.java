@@ -1,4 +1,4 @@
-package com.not_band.service.implement;
+package com.not_band.service.auth;
 
 import java.time.LocalDate;
 import java.util.List;
