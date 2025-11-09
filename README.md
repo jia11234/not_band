@@ -5,12 +5,12 @@
 ---
 
 ## 📑 목차
-- [프로젝트 소개](#프로젝트-소개)
-- [폴더 구성](#-폴더-구성)
-- [주요 기능](#주요-기능)
-- [API 명세서](#api-명세서)
-- [DB ERD](#db-erd)
-- [팀원](#팀원)
+- [프로젝트 소개](https://github.com/jia11234/not_band?tab=readme-ov-file#-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%86%8C%EA%B0%9C)
+- [폴더 구성](https://github.com/jia11234/not_band?tab=readme-ov-file#%EF%B8%8F-%ED%8F%B4%EB%8D%94-%EA%B5%AC%EC%84%B1)
+- [주요 기능](https://github.com/jia11234/not_band?tab=readme-ov-file#-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5)
+- [API 명세서](https://github.com/jia11234/not_band?tab=readme-ov-file#-api-%EB%AA%85%EC%84%B8%EC%84%9C)
+- [DB ERD](https://github.com/jia11234/not_band?tab=readme-ov-file#-db-erd)
+- [팀원](https://github.com/jia11234/not_band?tab=readme-ov-file#-%ED%8C%80%EC%9B%90)
 
 ---
 
