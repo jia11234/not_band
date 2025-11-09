@@ -31,6 +31,7 @@ import lombok.RequiredArgsConstructor;
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
+
 public class WebSecurityConfig {
     
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
@@ -50,7 +51,8 @@ public class WebSecurityConfig {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             )
             .authorizeHttpRequests(request -> request
-                .requestMatchers("/", "/api/v1/not_band/**","/oauth2/**","/api/v1/test/**","/ws/**").permitAll()
+                .requestMatchers( "/api/v1/not_band/**","/oauth2/**","/api/v1/test/**","/ws/**").permitAll()
+                .requestMatchers("/v3/**", "/swagger-ui/**").permitAll()
                 .requestMatchers("/api/v1/user/**").hasRole("USER")
                 .requestMatchers("/api/v1/admin/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
