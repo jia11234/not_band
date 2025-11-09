@@ -25,7 +25,7 @@ import com.not_band.dto.response.auth.SignInResponseDto;
 import com.not_band.dto.response.auth.SignUpResponseDto;
 import com.not_band.dto.response.auth.UserResponseDto;
 import com.not_band.entity.CertificationEntity;
-import com.not_band.entity.LoginEntity;
+import com.not_band.entity.LoginHistoryEntity;
 import com.not_band.entity.UserEntity;
 import com.not_band.provider.EmailProvider;
 import com.not_band.provider.JwtProvider;
@@ -34,7 +34,7 @@ import com.not_band.repository.ChatMessageRepository;
 import com.not_band.repository.ChatRepository;
 import com.not_band.repository.InquiryMessageRepository;
 import com.not_band.repository.InquiryRepository;
-import com.not_band.repository.LoginRepository;
+import com.not_band.repository.LoginHistoryRepository;
 import com.not_band.repository.OrderRepository;
 import com.not_band.repository.ResellRepository;
 import com.not_band.repository.ReviewRepository;
@@ -59,7 +59,7 @@ public class AuthServiceImplement implements AuthService{
     private final CertificationRepository certificationRepository;
     private final InquiryMessageRepository inquiryMessageRepository;
     private final OrderRepository orderRepository;
-    private final LoginRepository loginRepository;
+    private final LoginHistoryRepository loginRepository;
 
     private final JwtProvider jwtProvider;
     private final EmailProvider emailProvider;
@@ -196,7 +196,7 @@ public class AuthServiceImplement implements AuthService{
     
             token = jwtProvider.create(userId);
             
-            LoginEntity loginEntity = new LoginEntity();
+            LoginHistoryEntity loginEntity = new LoginHistoryEntity();
             loginEntity.setMemId(userId); // 로그인한 사용자 ID
             loginRepository.save(loginEntity);
     
@@ -406,7 +406,7 @@ public class AuthServiceImplement implements AuthService{
                     return ResponseEntity.badRequest().body("잘못된 주소 정보 형식입니다.");
                 }
 
-                case "password":
+                case "":
                     return updatePassword(memId, newValue); 
                 case "name":
                     return updateName(memId, newValue);
