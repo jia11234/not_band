@@ -2,10 +2,31 @@
 
 <img src="https://github.com/jia11234/not_band/blob/main/README%20%EB%A6%AC%EC%86%8C%EC%8A%A4/overview.jpg" width="1200">
 
+---
+
+## 📑 목차
+- [프로젝트 소개](#프로젝트-소개)
+- [폴더 구성](#-폴더-구성)
+- [주요 기능](#주요-기능)
+- [API 명세서](#api-명세서)
+- [DB ERD](#db-erd)
+- [팀원](#팀원)
+
+---
+
+## 📖 프로젝트 소개
+> 밴드 악기와 음향기기를 쉽고 편리하게 쇼핑하세요.<br>
+> 3D 악기 체험으로 구경하고 연주하며 중고 거래로 부담 없이 악기 생활을 시작해 보세요.
+
+### ⌛ **기간**: 2025.01 ~ 2025.05  
+### 👥 **팀원**: 3명  
+### 🛠️ **기술 스택**: React, Spring Boot, MySQL, Three.js, WebSocket
+
+---
 
 ## 🗂️ 폴더 구성
 
-### 📁 백엔드 (demo)  
+### 📁 **백엔드 (demo)**  
 `demo/src/main/java/com/not_band`  
 - config  
 - controller  
@@ -14,7 +35,9 @@
 - repository  
 - service  
 
-### 📁 프론트엔드 (front)  
+<div style="border-bottom: 1px solid #d9d9d9; margin: 20px 0;"></div>
+
+### 📁 **프론트엔드 (front)**  
 `front/`
 
 #### 주요 폴더  
@@ -44,16 +67,16 @@
 
 ---
 
-## 📍 주요 기능 (Key Features)
+## 📍 주요 기능
 
-### 🛒 온라인 판매 시스템  
+### **🛒 온라인 판매 시스템**  
 상품 조회, 장바구니, 주문 기능을 구현하여 온라인에서 편리하게 제품을 구매할 수 있습니다.
 
 ![커머스](https://github.com/jia11234/not_band/blob/main/README%20%EB%A6%AC%EC%86%8C%EC%8A%A4/shop.gif)<br><br>
 
 
 
-### 🔁 중고 마켓  
+### **🔁 중고 마켓**  
 사용자는 상품 등록 및 실시간 채팅으로 거래가 가능합니다.  
 부담없이 악기를 시작할 수 있으며,  
 중고 커뮤니티를 조성하여 자연스럽게 웹사이트 방문률을 높이는 메뉴입니다.
@@ -62,7 +85,7 @@
 
 
 
-### 💬 실시간 1:1 채팅  
+### **💬 실시간 1:1 채팅**  
 WebSocket 기반 실시간 채팅으로 두 가지 기능이 있습니다.  
 - 문의톡 : 관리자(판매자)한테 1:1 상품 문의  
 - 중고 거래톡 : 중고 구매/판매 시 사용자 간 대화 가능
@@ -71,7 +94,7 @@ WebSocket 기반 실시간 채팅으로 두 가지 기능이 있습니다.
 
 
 
-### 🎹 3D 악기 체험  
+### **🎹 3D 악기 체험**  
 초보자가 자유롭게 악기를 체험할 수 있도록 만든 메뉴이며,  
 각 악기는 초보자들에게 잘 팔리는 상품 및 판매하는 상품으로 모델링했습니다.  
 WebGL 기반 3D 악기 모델(일렉, 베이스, 키보드, 드럼)을 렌더링  
@@ -86,20 +109,20 @@ WebGL 기반 3D 악기 모델(일렉, 베이스, 키보드, 드럼)을 렌더링
 
 
 
-### 🔐 사용자 인증 및 보안  
+### **🔐 사용자 인증 및 보안**  
 JWT, OAuth2(Google/Kakao)로 로그인이 가능합니다
 
 <img src="https://github.com/jia11234/not_band/blob/main/README%20%EB%A6%AC%EC%86%8C%EC%8A%A4/%EB%A1%9C%EA%B7%B8%EC%9D%B8.png" width="300"><br><br>
 
 
-### 📝 리뷰  
+### **📝 리뷰**  
 상품 리뷰 작성할 경우 100P를 획득합니다.
 
 ![리뷰](https://github.com/jia11234/not_band/blob/main/README%20%EB%A6%AC%EC%86%8C%EC%8A%A4/%ED%9B%84%EA%B8%B0.gif)<br><br>
 
 
 
-### 🧑‍💼 관리자 페이지  
+### **🧑‍💼 관리자 페이지**  
 상품/회원/주문 데이터 관리 및 대시보드 구현했습니다
 
 <img src="https://github.com/jia11234/not_band/blob/main/README%20%EB%A6%AC%EC%86%8C%EC%8A%A4/%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C.png" width="860">
@@ -108,15 +131,21 @@ JWT, OAuth2(Google/Kakao)로 로그인이 가능합니다
 
 
 
-### 🃏 미니 게임  
+### **🎮 미니 게임**  
 간단한 카드 짝 맞추기 게임으로 성공할 경우 3P를 획득합니다.
 
 ![미니게임](https://github.com/jia11234/not_band/blob/main/README%20%EB%A6%AC%EC%86%8C%EC%8A%A4/%EA%B2%8C%EC%9E%84.gif)<br><br>
 
 ---
 
+## 🧾 API 명세서
+><br>
+><a href="https://jia11234.github.io/swagger-github-pages/" target="_blank">✨링크를 클릭하여 API 명세서를 확인해주세요!</a>
+><br><br>
 
-## 📄 DB ERD  
+----
+
+## 📄 DB ERD
 
 <img src="https://github.com/jia11234/not_band/blob/main/README%20%EB%A6%AC%EC%86%8C%EC%8A%A4/ERD.png" width="1200"><br><br>
 
@@ -124,14 +153,14 @@ JWT, OAuth2(Google/Kakao)로 로그인이 가능합니다
 
 ## 👥 팀원
 
-###  류지우 (팀장 / 프론트엔드 / 백엔드)  
+### **🐸 류지우 (팀장 / 프론트엔드 / 백엔드)**  
 - 기획 및 DB 구조 설계  
 
 **백엔드**  
 - 전체 백엔드 구현 및 REST API 설계  
 - Spring Boot 서버 구축 및 MySQL 연동  
 - JWT, OAuth2(카카오·네이버) 로그인/회원가입 구현  
-- KakaoPay 결제 기능 구현  
+- KakaoPay 결제 기능 구현  🧾
 - WebSocket 기반 실시간 채팅 구현  
 
 **프론트엔드**  
@@ -144,7 +173,7 @@ JWT, OAuth2(Google/Kakao)로 로그인이 가능합니다
 
 
 
-###  팀원1 (퍼블리싱)  
+### **🐧 팀원1 (퍼블리싱)**  
 - 주요 페이지 퍼블리싱  
   - 메인, 마이페이지, 상품 리뷰 등록, 중고 마켓 상세/등록, 이벤트, 고객센터  
 - 관리자 페이지 퍼블리싱 (약 35% 담당)  
@@ -152,7 +181,7 @@ JWT, OAuth2(Google/Kakao)로 로그인이 가능합니다
 
 
 
-###  팀원2 (3D / 디자인)  
+### **🦊 팀원2 (3D / 디자인)**  
 - 기획 및 3D 모델링(일렉, 베이스, 키보드, 드럼) 제작  
 - Three.js 활용한 3D 악기 체험 기능 구현  
 - 전체 디자인 및 시각 요소 담당  
