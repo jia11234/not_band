@@ -28,6 +28,8 @@ import com.not_band.dto.response.chat.ChatReadResponse;
 import com.not_band.entity.ChatEntity;
 import com.not_band.service.ChatService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -41,6 +43,11 @@ public class ChatController {
     private SimpMessagingTemplate messagingTemplate;
 
     //채팅 메세지 전송
+    @Operation(summary = "채팅 메세지 전송", description = "채팅 메세지 전송합니다.")
+    @ApiResponse(
+        responseCode = "200",
+        description = "채팅 메세지 전송 성공"
+    )
     @PostMapping("/message")
     public ResponseEntity<ChatMessageResponseDto> sendMessage(@RequestBody ChatMessageRequestDto requestDto) {
         ChatMessageResponseDto responseDto = chatService.sendMessage(requestDto);
@@ -50,6 +57,11 @@ public class ChatController {
 
     //채팅 메세지 조회
     @GetMapping("/{chatId}/messages")
+    @Operation(summary = "아이디별 채팅 메세지 조회", description = "아이디별 채팅 메세지 조회")
+    @ApiResponse(
+        responseCode = "200",
+        description = "아이디별 채팅 메세지 조회 성공"
+    )
     public ResponseEntity<List<ChatMessageResponseDto>> getMessages(
             @PathVariable("chatId") Integer chatId,
             @RequestParam("senderId") String senderId,
@@ -62,6 +74,11 @@ public class ChatController {
     
     //WebSocket으로 메세지 전송
     @MessageMapping("/chat/{chatId}")
+    @Operation(summary = "메세지 전송", description = "메세지를 전송합니다.")
+    @ApiResponse(
+        responseCode = "200",
+        description = "메세지 전송 성공"
+    )
     @SendTo("/topic/{chatId}")
     public ChatMessageResponseDto sendChatMessage(@DestinationVariable Integer chatId, 
                                                   @Payload ChatMessageRequestDto requestDto) {
@@ -71,6 +88,11 @@ public class ChatController {
 
     //채팅방 생성
     @PostMapping("/create-room")
+    @Operation(summary = "채팅방 생성", description = "채팅방을 생성합니다.")
+    @ApiResponse(
+        responseCode = "200",
+        description = "채팅방 생성 성공"
+    )
     public ResponseEntity<ChatEntity> createOrGetChatRoom(@RequestBody ChatDto requestDto) {
         Optional<ChatEntity> existingRoom = chatService.findChatRoom(requestDto.getResId(), requestDto.getMemId1(), requestDto.getMemId2());
     
@@ -86,6 +108,11 @@ public class ChatController {
 
     //채팅 목록
     @GetMapping("/{memId}")
+    @Operation(summary = "아이디별 채팅 목록 조회", description = "아이디별 채팅 목록 조회")
+    @ApiResponse(
+        responseCode = "200",
+        description = "채팅 목록 조회 성공"
+    )
     public ResponseEntity<List<ChatDto>> getChatsByMemId(@PathVariable("memId") String memId) {
         try {
             List<ChatDto> chats = chatService.getChatsByMemId(memId);
@@ -98,6 +125,11 @@ public class ChatController {
     //읽음
     @MessageMapping("/chat/{chatId}/read")
     @SendTo("/topic/chat/{chatId}/read")
+    @Operation(summary = "채팅 읽음 처리", description = "채팅 읽음 처리합니다.")
+    @ApiResponse(
+        responseCode = "200",
+        description = "읽음 처리 완료"
+    )
     public ChatReadResponse readMessage(@DestinationVariable Integer chatId, @Payload ChatReadRequest request) {
         System.out.println("이건 됩니다요~~~~~");
         chatService.updateMessagesToRead(chatId, String.valueOf(request.getReaderId()));
@@ -109,6 +141,11 @@ public class ChatController {
     }
 
     //채팅방 입장 알람
+    @Operation(summary = "채팅방 입장 알람", description = "채팅방 입장 알람을 보냅니다.")
+    @ApiResponse(
+        responseCode = "200",
+        description = "알람 성공"
+    )
     @MessageMapping("/chat/{chatId}/join")
     public void handleUserJoin(@DestinationVariable Integer chatId, @Payload String userId) {
         System.out.println("새로운 사용자 " + userId + "가 방에 들어옴.");

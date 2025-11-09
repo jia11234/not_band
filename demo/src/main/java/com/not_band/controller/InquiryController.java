@@ -28,6 +28,8 @@ import com.not_band.dto.response.chat.ChatReadResponse;
 import com.not_band.entity.InquiryEntity;
 import com.not_band.service.InquiryService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -41,6 +43,11 @@ public class InquiryController {
     private SimpMessagingTemplate messagingTemplate;
 
     //채팅 메세지 전송
+    @Operation(summary = "채팅 메세지 전송", description = "채팅 메세지 전송합니다.")
+    @ApiResponse(
+        responseCode = "200",
+        description = "채팅 메세지 전송 성공"
+    )
     @PostMapping("/message")
     public ResponseEntity<InquiryMessageResponseDto> sendMessage(@RequestBody InquiryMessageRequestDto requestDto) {
         InquiryMessageResponseDto responseDto = inquiryService.sendMessage(requestDto);
@@ -49,6 +56,11 @@ public class InquiryController {
 
     //채팅 메세지 조회
     @GetMapping("/{chatId}/messages")
+    @Operation(summary = "아이디별 채팅 메세지 조회", description = "아이디별 채팅 메세지 조회")
+    @ApiResponse(
+        responseCode = "200",
+        description = "아이디별 채팅 메세지 조회 성공"
+    )
     public ResponseEntity<List<InquiryMessageResponseDto>> getMessages(
             @PathVariable("chatId") Integer chatId,
             @RequestParam("senderId") String senderId,
@@ -61,6 +73,11 @@ public class InquiryController {
 
     //WebSocket으로 메세지 전송
     @MessageMapping("/inquiry/{chatId}")
+    @Operation(summary = "메세지 전송", description = "메세지를 전송합니다.")
+    @ApiResponse(
+        responseCode = "200",
+        description = "메세지 전송 성공"
+    )
     @SendTo("/topic/{chatId}")
     public InquiryMessageResponseDto sendChatMessage(@DestinationVariable Integer chatId, 
                                                   @Payload InquiryMessageRequestDto requestDto) {
@@ -70,6 +87,11 @@ public class InquiryController {
 
     //채팅방 생성
     @PostMapping("/create-room")
+    @Operation(summary = "채팅방 생성", description = "채팅방을 생성합니다.")
+    @ApiResponse(
+        responseCode = "200",
+        description = "채팅방 생성 성공"
+    )
     public ResponseEntity<InquiryEntity> createOrGetChatRoom(@RequestBody InquiryDto requestDto) {
         Optional<InquiryEntity> existingRoom = inquiryService.findChatRoom(requestDto.getMemId(), requestDto.getSelId());
     
@@ -85,6 +107,11 @@ public class InquiryController {
 
     //전체 채팅 목록 조회
     @GetMapping
+    @Operation(summary = "전체 채팅 목록 조회", description = "전체 채팅 목록을 조회합니다.")
+    @ApiResponse(
+        responseCode = "200",
+        description = "전체 채팅 목록 조회 성공"
+    )
     public ResponseEntity<List<InquiryDto>> getAllChats() {
         try {
             List<InquiryDto> chats = inquiryService.getAllChats();
@@ -96,6 +123,11 @@ public class InquiryController {
 
     //채팅 목록
     @GetMapping("/{memId}")
+    @Operation(summary = "아이디별 채팅 목록 조회", description = "아이디별 채팅 목록 조회")
+    @ApiResponse(
+        responseCode = "200",
+        description = "채팅 목록 조회 성공"
+    )
     public ResponseEntity<List<InquiryDto>> getInquiryMemId(@PathVariable("memId") String memId) {
         try {
             List<InquiryDto> chats = inquiryService.getInquiryMemId(memId);
@@ -108,6 +140,11 @@ public class InquiryController {
     //읽음처리
     @MessageMapping("/inquiry/{chatId}/read")
     @SendTo("/topic/inquiry/{chatId}/read")
+    @Operation(summary = "채팅 읽음 처리", description = "채팅 읽음 처리합니다.")
+    @ApiResponse(
+        responseCode = "200",
+        description = "읽음 처리 완료"
+    )
     public ChatReadResponse readMessage(@DestinationVariable Integer chatId, @Payload ChatReadRequest request) {
         System.out.println("이건 됩니다요~~~~~");
         inquiryService.updateMessagesToRead(chatId, String.valueOf(request.getReaderId()));
@@ -120,8 +157,13 @@ public class InquiryController {
     
     //채팅방 입장 알람
     @MessageMapping("/inquiry/{chatId}/join")
+    @Operation(summary = "채팅방 입장 알람", description = "채팅방 입장 알람을 보냅니다.")
+    @ApiResponse(
+        responseCode = "200",
+        description = "알람 성공"
+    )
     public void handleUserJoin(@DestinationVariable Integer chatId, @Payload String userId) {
-        System.out.println("새로운 사용자 " + userId + "가 방에 들어옴.");
+        System.out.println("새로운 사용자" + userId + "가 방에 들어옴.");
         String notificationMessage = userId + "님이 채팅방에 입장했습니다!";
         messagingTemplate.convertAndSend("/topic/inquiry/" + chatId + "/join", notificationMessage);
     }
