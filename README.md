@@ -110,7 +110,7 @@ WebGL 기반 3D 악기 모델(일렉, 베이스, 키보드, 드럼)을 렌더링
 
 
 ### **🔐 사용자 인증 및 보안**  
-JWT, OAuth2(Google/Kakao)로 로그인이 가능합니다
+JWT, OAuth2(Naver/Kakao)로 로그인이 가능합니다.
 
 <img src="https://github.com/jia11234/not_band/blob/main/README%20%EB%A6%AC%EC%86%8C%EC%8A%A4/%EB%A1%9C%EA%B7%B8%EC%9D%B8.png" width="300"><br><br>
 
@@ -160,7 +160,7 @@ JWT, OAuth2(Google/Kakao)로 로그인이 가능합니다
 - 전체 백엔드 구현 및 REST API 설계  
 - Spring Boot 서버 구축 및 MySQL 연동  
 - JWT, OAuth2(카카오·네이버) 로그인/회원가입 구현  
-- KakaoPay 결제 기능 구현  🧾
+- KakaoPay 결제 기능 구현 
 - WebSocket 기반 실시간 채팅 구현  
 
 **프론트엔드**  
