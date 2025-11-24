@@ -28,12 +28,12 @@
 
 ### 📁 **백엔드 (demo)**  
 `demo/src/main/java/com/not_band`  
-- config  
-- controller  
-- dto  
-- entity  
-- repository  
-- service  
+- config : CORS, JWT 등 프로젝트 전반 설정
+- controller :  요청 처리 및 응답 반환
+- dto : API 요청/응답 데이터 구조 정의
+- entity : DB 테이블 매핑되는 클래스
+- repository : JPA를 사용한 DB CRUD
+- service : 비즈니스 로직 처리 및 데이터 가공
 
 <div style="border-bottom: 1px solid #d9d9d9; margin: 20px 0;"></div>
 
