@@ -20,13 +20,13 @@ export default function Inquiry() {
   const [product, setProduct] = useState({
     resImgUrl: [],
   });
-
+  const broker_url = import.meta.env.VITE_WS_URL;
   useEffect(() => {
     if (cookies.accessToken) {
       setToken(cookies.accessToken);
     }
   }, [cookies]);
-
+  const API_URL = import.meta.env.VITE_API_URL;
   useEffect(() => {
     if (!token) return;
     getMemIdFromToken();
@@ -34,7 +34,7 @@ export default function Inquiry() {
     const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
     const decoded = JSON.parse(window.atob(base64));
     const client = new Client({
-      brokerURL: "ws://localhost:8080/ws",
+      brokerURL: broker_url,
       connectHeaders: {
         Authorization: `Bearer ${token}`,
       },
@@ -105,7 +105,7 @@ export default function Inquiry() {
 
 
     fetch(
-      `http://localhost:8080/api/v1/not_band/inquiry/${chatId}/messages?senderId=${id}`,
+      `${API_URL}/api/v1/not_band/inquiry/${chatId}/messages?senderId=${id}`,
       {
         method: "GET",
         headers: {

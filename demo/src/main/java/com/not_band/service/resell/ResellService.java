@@ -1,4 +1,10 @@
 package com.not_band.service.resell;
+
+import software.amazon.awssdk.core.sync.RequestBody;
+import software.amazon.awssdk.services.s3.S3Client;
+import software.amazon.awssdk.services.s3.model.PutObjectRequest;
+import org.springframework.beans.factory.annotation.Value;
+
 import com.not_band.dto.request.resell.ResellProductRequestDto;
 import com.not_band.dto.response.resell.ResellProductResponseDto;
 import com.not_band.entity.ChatEntity;
@@ -27,6 +33,12 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class ResellService {
+
+    private final S3Client s3Client;
+
+    @Value("${cloud.aws.s3.bucket}")
+    private String bucket;
+
 
     private final ChatRepository chatRepository;
     private final UserRepository userRepository;
@@ -68,8 +80,20 @@ public class ResellService {
         // 폴더가 없다면 자동 생성
         Files.createDirectories(Paths.get(UPLOAD_DIR));
 
-        Path filePath = Paths.get(UPLOAD_DIR + filename);
-        Files.write(filePath, imageBytes);
+        String directory = "upload/resell/";
+
+        String key = directory + filename;
+
+        s3Client.putObject(
+                PutObjectRequest.builder()
+                        .bucket(bucket)
+                        .key(key)
+                        .build(),
+                RequestBody.fromBytes(imageBytes)
+        );
+
+        // Path filePath = Paths.get(UPLOAD_DIR + filename);
+        // Files.write(filePath, imageBytes);
 
         return "/images/resell/" + filename; // 프론트에서 불러올 경로
     }

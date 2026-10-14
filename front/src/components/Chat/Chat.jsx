@@ -27,7 +27,7 @@ export default function Chat() {
       setToken(cookies.accessToken);
     }
   }, [cookies]);
-
+  const broker_url = import.meta.env.VITE_WS_URL;
   useEffect(() => {
     if (!token) return;
     getMemIdFromToken();
@@ -35,7 +35,7 @@ export default function Chat() {
     const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
     const decoded = JSON.parse(window.atob(base64));
     const client = new Client({
-      brokerURL: "ws://localhost:8080/ws",
+      brokerURL: broker_url,
       connectHeaders: {
         Authorization: `Bearer ${token}`,
       },
@@ -85,7 +85,7 @@ export default function Chat() {
       setResell(resData);
     }
   };
-
+  const API_URL = import.meta.env.VITE_API_URL;
   useEffect(() => {
     fetchMessages(memId);
   }, [messages.map((m) => m.mesRead).join(",")]);
@@ -107,7 +107,7 @@ export default function Chat() {
 
 
     fetch(
-      `http://localhost:8080/api/v1/not_band/chat/${chatId}/messages?senderId=${id}`,
+      `${API_URL}/api/v1/not_band/chat/${chatId}/messages?senderId=${id}`,
       {
         method: "GET",
         headers: {

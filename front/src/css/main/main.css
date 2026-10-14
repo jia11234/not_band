@@ -285,7 +285,11 @@ body {
 .not_found p {
     font-size: 20px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.not_found .sign_in_success{
+    line-height: 150%;
 }
 
 /* 해당 페이지 없으면 나오는 창임 없애면 안됨 */

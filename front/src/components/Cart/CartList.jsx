@@ -22,7 +22,7 @@ export default function CartList({
   const [quantities, setQuantities] = useState({}); // 수량 관리
   const [prices, setPrices] = useState({}); // 가격 관리
   const [selectAll2, setSelectAll2] = useState();
-
+  const API_URL = import.meta.env.VITE_API_URL;
   useEffect(() => {
     const checkedCount = cartItems.filter(
       (item) => item.cartChecked === true,
@@ -123,7 +123,7 @@ export default function CartList({
                   <p className="cart_color_option">옵션: {item.colorOpt}</p>
                 )}
                 <div className="cart_list_product_group">
-                <img src={`http://localhost:8080/api/v1/not_band/images/product/${item.prdNo}.png`} />
+                <img src={`${API_URL}/api/v1/not_band/images/product/${item.prdNo}.png`} />
                   <div>
                     <p>
                       {prices[item.prdNo]?.originalPrice.toLocaleString() ||

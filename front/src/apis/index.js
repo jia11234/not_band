@@ -14,9 +14,9 @@ const errorHandler = (error) => {
 
 let DOMAIN;
 if (window.location.hostname === 'localhost') {
-    DOMAIN = 'http://localhost:8080';
+    DOMAIN = import.meta.env.VITE_API_URL;
 } else {
-    DOMAIN = ''; // 아이피 주소
+    DOMAIN = import.meta.env.VITE_API_URL; // 아이피 주소
 }
 
 const API_DOMAIN = `${DOMAIN}/api/v1`;

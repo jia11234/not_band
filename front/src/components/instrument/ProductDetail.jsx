@@ -43,7 +43,7 @@ export default function ProductDetail({ setCartCount }) {
     option1: "",
     option2: "",
   });
-
+  const API_URL = import.meta.env.VITE_API_URL;
   const [dataOption, setDataOption] = useState([]);
 
   const [dataOption2, setDataOption2] = useState([]);
@@ -538,7 +538,7 @@ export default function ProductDetail({ setCartCount }) {
       <Dialog open={open} onClose={handleClose} disableScrollLock>
         <DialogTitle>NOT_BAND</DialogTitle>
         <DialogContent>
-          <p>로그인 후에만 사용할 수 있어여</p>
+          <p>로그인 후에만 사용할 수 있어요</p>
         </DialogContent>
         <DialogActions>
           <Button
@@ -604,7 +604,7 @@ export default function ProductDetail({ setCartCount }) {
       <div id="detailprd">
         <div className="de_prd_img">
           <img
-            src={`http://localhost:8080/api/v1/not_band/images/product/${product.prdNo}.png`}
+            src={`${API_URL}/api/v1/not_band/images/product/${product.prdNo}.png`}
             alt={`${product.prdNo}`}
           />
         </div>

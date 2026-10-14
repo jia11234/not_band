@@ -24,6 +24,7 @@ export default function ProductList({ products, value2, setCartCount }) {
   const [optionColor, setOptionColor] = useState("");
   const [optionBoolean, setOptionBoolean] = useState(false);
   const [cartClear, setCartClear] = useState(false);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const updateRow = () => {
@@ -157,7 +158,7 @@ export default function ProductList({ products, value2, setCartCount }) {
         <DialogTitle>
           <div style={{ display: "inline-flex", alignItems: "center" }}>
             <img
-              src={`http://localhost:8080/api/v1/not_band/images/product/${prdNo}.png`}
+              src={`${API_URL}/api/v1/not_band/images/product/${prdNo}.png`}
               alt={`${prdNo}`}
               style={{ width: "100px", height: "100px", marginRight: "20px" }}
             />
@@ -246,7 +247,7 @@ export default function ProductList({ products, value2, setCartCount }) {
             <div className="product_group" key={index}>
               <div className="product_img">
                 <Link to={`/not_band/instrument-detail?prdNo=${product.prdNo}`}>
-                <img src={`http://localhost:8080/api/v1/not_band/images/product/${product.prdNo}.png`} />
+                <img src={`${API_URL}/api/v1/not_band/images/product/${product.prdNo}.png`} />
                 </Link>
               </div>
               <button

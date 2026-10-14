@@ -104,9 +104,9 @@ public class UserEntity {
         this.role="ROLE_USER";
     }
 
-    public UserEntity (String memId, String memEmail, String type) {
+    public UserEntity (String memId, String memEmail, String type, String password) {
         this.memId = memId;
-        this.memPasswd = "pAssWord"; //OAuth 로그인일 경우
+        this.memPasswd = password; //OAuth 로그인일 경우
         this.memName = "user";
         this.memPhone = "user_phone";
         this.memEmail = memEmail;

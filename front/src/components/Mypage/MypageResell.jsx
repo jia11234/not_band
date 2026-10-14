@@ -33,6 +33,7 @@ export default function MypageResell() {
   const [starter, setStarter] = useState(false);
   const [filter, setFilter] = useState("전체");
   const [open, setOpen] = useState(false);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const location = useLocation();
   const category = new URLSearchParams(location.search).get("category");
@@ -189,7 +190,7 @@ export default function MypageResell() {
           <>
           <div key={item.prdNo} className="mp_R_myprd_group">
             <img
-              src={`http://localhost:8080/api/v1/not_band${item.resImgUrl1}`}
+              src={`${API_URL}/api/v1/not_band${item.resImgUrl1}`}
               alt={`${item.resPrd}`}
             />
             <div className="mp_R_ws_prd_text">

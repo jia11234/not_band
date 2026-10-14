@@ -128,12 +128,7 @@ public class ChatController {
         responseCode = "200",
         description = "읽음 처리 완료"
     )
-<<<<<<< HEAD
     public ChatReadResponse readMessage(@DestinationVariable("chatId") Integer chatId, @Payload ChatReadRequest request) {
-=======
-    public ChatReadResponse readMessage(@DestinationVariable Integer chatId, @Payload ChatReadRequest request) {
-        System.out.println("이건 됩니다요~~~~~");
->>>>>>> 64e698d (docs: Swagger 어노테이션 추가)
         chatService.updateMessagesToRead(chatId, String.valueOf(request.getReaderId()));
         ChatReadResponse response = new ChatReadResponse();
         response.setChatId(chatId);

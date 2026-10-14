@@ -17,6 +17,7 @@ export default function InquiryAdmin() {
   const [memId, setMemId] = useState();
   const chatId = new URLSearchParams(location.search).get("chatId");
   const prdNo = new URLSearchParams(location.search).get("prdNo");
+  const API_URL = import.meta.env.VITE_API_URL;
   const [product, setProduct] = useState({
     resImgUrl: [],
   });
@@ -26,7 +27,7 @@ export default function InquiryAdmin() {
       setToken(cookies.accessToken);
     }
   }, [cookies]);
-
+  const broker_url = import.meta.env.VITE_WS_URL;
   useEffect(() => {
     if (!token) return;
     getMemIdFromToken();
@@ -34,7 +35,7 @@ export default function InquiryAdmin() {
     const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
     const decoded = JSON.parse(window.atob(base64));
     const client = new Client({
-      brokerURL: "ws://localhost:8080/ws",
+      brokerURL: broker_url,
       connectHeaders: {
         Authorization: `Bearer ${token}`,
       },
@@ -106,7 +107,7 @@ export default function InquiryAdmin() {
 
 
     fetch(
-      `http://localhost:8080/api/v1/not_band/inquiry/${chatId}/messages?senderId=${id}`,
+      `${API_URL}/api/v1/not_band/inquiry/${chatId}/messages?senderId=${id}`,
       {
         method: "GET",
         headers: {

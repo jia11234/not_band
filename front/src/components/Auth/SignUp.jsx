@@ -82,6 +82,23 @@ export default function SignUp() {
     detailAddress: "",
   });
 
+const SUCCESS_MESSAGES = {
+  id: "사용 가능한 아이디입니다",
+  certification_number: "인증번호가 확인되었습니다",
+};
+
+useEffect(() => {
+  const timers = Object.keys(SUCCESS_MESSAGES)
+    .filter((key) => message[key] === SUCCESS_MESSAGES[key])
+    .map((key) =>
+      setTimeout(() => {
+        setMessage((prev) => ({ ...prev, [key]: "" }));
+      }, 3000)
+    );
+
+  return () => timers.forEach(clearTimeout);
+}, [message.id, message.email]);
+
   //유효성 검사후 아이디 중복 검사
   const idCheckResponse = (responseBody) => {
     let newMessage = {
@@ -109,7 +126,7 @@ export default function SignUp() {
     if (code !== ResponseCode.SUCCESS) return;
 
     setIdError(false);
-    newMessage.id = "사용 가능한 아이디 입니다.";
+    newMessage.id = "사용 가능한 아이디입니다";
     setIdCheck(true);
     setMessage(newMessage);
   };
@@ -138,6 +155,12 @@ export default function SignUp() {
 
     const requestBody = { id: data.id };
     idCheckRequest(requestBody).then(idCheckResponse);
+
+    useEffect(() => {
+      if (!newMessage) return;
+      const timer = setTimeout(() => setMessage(""), 3000);
+      return () => clearTimeout(timer);
+    }, [message]);
   };
 
   const onEmailButtonClickHandler = (e) => {
@@ -149,7 +172,7 @@ export default function SignUp() {
     };
 
     if (!isIdCheck) {
-      newMessage.id = "아이디 중복확인좀 해라";
+      newMessage.id = "아이디 중복확인을 해주세요";
       inputRef.current?.focus();
       setMessage(newMessage);
       return;
@@ -515,7 +538,7 @@ export default function SignUp() {
 
         <div>
           <p>
-            <b>ID*</b>
+            <b>ID<span>*</span></b>
           </p>
           <input
             type="text"
@@ -543,7 +566,7 @@ export default function SignUp() {
 
         <div>
           <p>
-            <b>NICKNAME*</b>
+            <b>NICKNAME<span>*</span></b>
           </p>
           <input
             type="text"
@@ -567,7 +590,7 @@ export default function SignUp() {
 
         <div>
           <p>
-            <b>PASSWORD*</b>
+            <b>PASSWORD<span>*</span></b>
           </p>
           <input
             type="password"
@@ -591,7 +614,7 @@ export default function SignUp() {
 
         <div>
           <p>
-            <b>PASSWORD 확인*</b>
+            <b>PASSWORD 확인<span>*</span></b>
           </p>
           <input
             type="password"
@@ -615,7 +638,7 @@ export default function SignUp() {
 
         <div>
           <p>
-            <b>NAME*</b>
+            <b>NAME<span>*</span></b>
           </p>
           <input
             type="text"
@@ -639,7 +662,7 @@ export default function SignUp() {
 
         <div>
           <p>
-            <b>PHONE-NUMBER*</b>
+            <b>PHONE-NUMBER<span>*</span></b>
           </p>
           <input
             type="text"
@@ -664,7 +687,7 @@ export default function SignUp() {
 
         <div>
           <p>
-            <b>E-MAIL*</b>
+            <b>E-MAIL<span>*</span></b>
           </p>
           <input
             type="text"
@@ -694,7 +717,7 @@ export default function SignUp() {
 
         <div>
           <p>
-            <b>인증번호*</b>
+            <b>인증번호<span>*</span></b>
           </p>
           <input
             type="text"

@@ -28,6 +28,7 @@ import "moment/locale/ko";
 
 export default function AdminDashboard() {
   // 리뷰관리
+  const API_URL = import.meta.env.VITE_API_URL;
   const [review, setReview] = useState([]);
   const [login, setLogin] = useState();
   const [user, setUser] = useState([]);
@@ -429,7 +430,7 @@ export default function AdminDashboard() {
                   <td>
                     {product.resImgUrl1 ? (
                       <img
-                        src={`http://localhost:8080/api/v1/not_band${product.resImgUrl1}`}
+                        src={`${API_URL}/api/v1/not_band${product.resImgUrl1}`}
                         alt={product.resPrd}
                         style={{ width: "80px", height: "80px" }}
                       />
@@ -474,7 +475,7 @@ export default function AdminDashboard() {
             <tr key={index} className="da_review_text_table">
               <td>
                 <img
-                  src={`http://localhost:8080/api/v1/not_band/images/product/${review.prdNo}.png`}
+                  src={`${API_URL}/api/v1/not_band/images/product/${review.prdNo}.png`}
                   alt={`${review.prdNo}`}
                   style={{ width: "80px", height: "80px", marginTop:"calc(19.75px)", marginBottom:"calc(19.75px)" }}
                 />

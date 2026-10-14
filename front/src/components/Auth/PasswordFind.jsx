@@ -297,7 +297,7 @@ export default function PasswordFind() {
   };
 
   return (
-    <div className="id_find_group">
+    <div className="password_find_group">
       <div>
         <p>
           <b>E-MAIL</b>
@@ -364,7 +364,7 @@ export default function PasswordFind() {
         </div>
       </div>
 
-      <div>
+      <div className="password_find_id">
         <p>
           <b>아이디</b>
         </p>
@@ -394,7 +394,7 @@ export default function PasswordFind() {
       </div>
 
       <button type="submit" className="btnRed" onClick={signUpSubmit}>
-        아이디 찾기
+        비밀번호 찾기
       </button>
     </div>
   );

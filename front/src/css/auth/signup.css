@@ -15,6 +15,13 @@
   margin-top: 10px;
   color: #ff4a01;
 }
+.signup div p {
+  color: #0a0a0a;
+}
+.signup div p span {
+  margin-top: 10px;
+  color: #ff4a01;
+}
 
 .inputBox {
   width: 270px;

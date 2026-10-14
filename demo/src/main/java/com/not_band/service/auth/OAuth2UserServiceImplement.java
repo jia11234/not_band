@@ -2,6 +2,7 @@ package com.not_band.service.auth;
 
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
 import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
@@ -21,6 +22,8 @@ public class OAuth2UserServiceImplement extends DefaultOAuth2UserService {
     
     private final UserRepository userRepository;
 
+    @Value("${password}")
+    private String password;
     @SuppressWarnings("null")
     @Override
     public OAuth2User loadUser(OAuth2UserRequest request) throws OAuth2AuthenticationException {
@@ -41,14 +44,14 @@ public class OAuth2UserServiceImplement extends DefaultOAuth2UserService {
         if (oauthClientName.equals("kakao")){
             userId = "kakao_" + oAuth2User.getAttributes().get("id");
             email = "email@email.com";
-            userEntity = new UserEntity(userId, email,"kakao");
+            userEntity = new UserEntity(userId, email,"kakao", password);
         }
 
         if (oauthClientName.equals("naver")) {
             Map<String, String> responseMap = (Map<String, String>) oAuth2User.getAttributes().get("response");
             userId = "naver_" + responseMap.get("id").substring(0,14);
             email = responseMap.get("email");
-            userEntity = new UserEntity(userId, email,"naver");
+            userEntity = new UserEntity(userId, email,"naver", password);
         }
 
         userRepository.save(userEntity);

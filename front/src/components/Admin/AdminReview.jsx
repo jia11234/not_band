@@ -23,7 +23,7 @@ export default function AdminReview() {
   const [products, setProducts] = useState([]);
   const [products2, setProducts2] = useState([]);
   const [expandedStates, setExpandedStates] = useState({});
-
+  const API_URL = import.meta.env.VITE_API_URL;
   useEffect(() => {
     fetchReview();
     fetchProducts();
@@ -145,7 +145,7 @@ export default function AdminReview() {
                 >
                   <div>
                     <img
-                      src={`http://localhost:8080/api/v1/not_band/images/product/${item.prdNo}.png`}
+                      src={`${API_URL}/api/v1/not_band/images/product/${item.prdNo}.png`}
                       alt={item.prdNo}
                       style={{ backgroundColor: "#eeeeee" }}
                     />
@@ -211,7 +211,7 @@ export default function AdminReview() {
                       {revImgUrl.map((img, idx) => (
                         <div className="reviewcon_img" key={idx}>
                         <img
-                          src={`http://localhost:8080/api/v1/not_band/images/review/${
+                          src={`${API_URL}/api/v1/not_band/images/review/${
                             img.substring(img.lastIndexOf("/") + 1)
                           }`}
                           alt={img}

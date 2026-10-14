@@ -269,7 +269,7 @@ export default function Cart({ setCartCount }) {
       <Dialog open={open} onClose={handleClose} disableScrollLock>
         <DialogTitle>NOT_BAND</DialogTitle>
         <DialogContent>
-          <p>장바구니는여 로그인 후에만 사용할 수 있어여</p>
+          <p>장바구니는 로그인 후에만 사용할 수 있어요</p>
         </DialogContent>
         <DialogActions>
           <Button

@@ -1,5 +1,10 @@
 package com.not_band.service.review;
 
+import software.amazon.awssdk.core.sync.RequestBody;
+import software.amazon.awssdk.services.s3.S3Client;
+import software.amazon.awssdk.services.s3.model.PutObjectRequest;
+import org.springframework.beans.factory.annotation.Value;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -26,6 +31,12 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class ReviewService {
+
+    private final S3Client s3Client;
+
+    @Value("${cloud.aws.s3.bucket}")
+    private String bucket;
+
     private final ReviewRepository reviewRepository;
     private static final String UPLOAD_DIR = "/upload/review/";
     private final UserRepository userRepository;
@@ -64,8 +75,21 @@ public class ReviewService {
         // 폴더가 없다면 자동 생성
         Files.createDirectories(Paths.get(UPLOAD_DIR));
 
-        Path filePath = Paths.get(UPLOAD_DIR + filename);
-        Files.write(filePath, imageBytes);
+        String directory = "upload/review/";
+        Files.createDirectories(Paths.get(directory));
+
+        String key = directory + filename;
+
+        s3Client.putObject(
+                PutObjectRequest.builder()
+                        .bucket(bucket)
+                        .key(key)
+                        .build(),
+                RequestBody.fromBytes(imageBytes)
+        ); 
+
+        // Path filePath = Paths.get(UPLOAD_DIR + filename);
+        // Files.write(filePath, imageBytes);
 
         return "/images/review/" + filename; // 프론트에서 불러올 경로
     }

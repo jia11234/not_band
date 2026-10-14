@@ -32,6 +32,7 @@ export default function Index({setCartCount}) {
   const [order, setOrder] = useState([]);
   const [order2, setOrder2] = useState([]);
   const [top3Products, setTop3Products] = useState([]);
+  const API_URL = import.meta.env.VITE_API_URL
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -54,6 +55,7 @@ export default function Index({setCartCount}) {
         .slice(0, 8);
 
       setProducts3(filtered);
+      console.log("top3", top3Products);
     };
 
     fetchProducts();
@@ -67,6 +69,8 @@ export default function Index({setCartCount}) {
     arrows: true,
     centerMode: true,
     centerPadding: "0.1%", 
+    autoplay: true,
+    autoplaySpeed: 6700,
     responsive: [
       {
         breakpoint: 1440, 
@@ -83,9 +87,10 @@ export default function Index({setCartCount}) {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    arrows: true, 
     centerMode: true,
     centerPadding: "0.1%", 
+    autoplay: true,
+    autoplaySpeed: 6700,
     responsive: [
       {
         breakpoint: 1440,
@@ -102,7 +107,8 @@ export default function Index({setCartCount}) {
     speed: 600,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrow: false,
+    autoplay: true,
+    autoplaySpeed: 6700,
   };
 
   const sliderSettings_title = {
@@ -112,7 +118,8 @@ export default function Index({setCartCount}) {
     speed: 600,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrow: false,
+    autoplay: true,
+    autoplaySpeed: 6700,
   };
 
   const sliderRef1 = useRef(null);
@@ -346,7 +353,7 @@ export default function Index({setCartCount}) {
         <DialogTitle>
           <div style={{ display: "inline-flex", alignItems: "center" }}>
             <img
-              src={`http://localhost:8080/api/v1/not_band/images/product/${prdNo}.png`}
+              src={`${API_URL}/api/v1/not_band/images/product/${prdNo}.png`}
               alt={`${prdNo}`}
               style={{ width: "100px", height: "100px", marginRight: "20px" }}
             />
@@ -529,7 +536,7 @@ export default function Index({setCartCount}) {
                 <div className="starter_img_cart">
                   <Link to={`/not_band/instrument-detail?prdNo=${num.prdNo}`}>
                     <img
-                      src={`http://localhost:8080/api/v1/not_band/images/product/${num.prdNo}.png`}
+                      src={`${API_URL}/api/v1/not_band/images/product/${num.prdNo}.png`}
                       alt={`${num.prdNo}`}
                     />
                   </Link>
@@ -594,7 +601,7 @@ export default function Index({setCartCount}) {
                       to={`/not_band/instrument-detail?prdNo=${item.prdNo}`}
                     >
                       <img
-                        src={`http://localhost:8080/api/v1/not_band/images/product/${item.prdNo}.png`}
+                        src={`${API_URL}/api/v1/not_band/images/product/${item.prdNo}.png`}
                         alt={item.prdName}
                       />
                     </Link>
@@ -644,7 +651,7 @@ export default function Index({setCartCount}) {
                       to={`/not_band/instrument-detail?prdNo=${top3Products[0].prdNo}`}
                     >
                       <img
-                        src={`http://localhost:8080/api/v1/not_band/images/product/${top3Products[0].prdNo}.png`}
+                        src={`${API_URL}/api/v1/not_band/images/product/${top3Products[0].prdNo}.png`}
                         alt={top3Products[0].prdNo}
                       />
                     </Link>
@@ -690,7 +697,7 @@ export default function Index({setCartCount}) {
                   <div className="best_img_cart">
                     <Link to={`/not_band/instrument-detail?prdNo=${num.prdNo}`}>
                       <img
-                        src={`http://localhost:8080/api/v1/not_band/images/product/${num.prdNo}.png`}
+                        src={`${API_URL}/api/v1/not_band/images/product/${num.prdNo}.png`}
                         alt={num.prdName}
                       />
                     </Link>
@@ -728,7 +735,7 @@ export default function Index({setCartCount}) {
                   <div className="starter_img_cart">
                     <Link to={`/not_band/instrument-detail?prdNo=${num.prdNo}`}>
                       <img
-                        src={`http://localhost:8080/api/v1/not_band/images/product/${num.prdNo}.png`}
+                        src={`${API_URL}/api/v1/not_band/images/product/${num.prdNo}.png`}
                         alt={num.prdName}
                       />
                     </Link>
@@ -783,7 +790,7 @@ export default function Index({setCartCount}) {
                       onMouseMove={() => (window.isDragging = true)}
                     >
                       <img
-                        src={`http://localhost:8080/api/v1/not_band/images/product/${num.prdNo}.png`}
+                        src={`${API_URL}/api/v1/not_band/images/product/${num.prdNo}.png`}
                         alt={num.prdName}
                       />
                     </Link>

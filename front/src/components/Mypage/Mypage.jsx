@@ -108,7 +108,7 @@ export default function Mypage() {
       <Dialog open={open} onClose={handleClose} disableScrollLock>
         <DialogTitle>NOT_BAND</DialogTitle>
         <DialogContent>
-          <p>마이페이지는 로그인 후에만 사용할 수 있어여</p>
+          <p>마이페이지는 로그인 후에만 사용할 수 있어요</p>
         </DialogContent>
         <DialogActions>
           <Button

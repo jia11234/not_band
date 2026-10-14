@@ -78,7 +78,7 @@ public class InquiryController {
         description = "메세지 전송 성공"
     )
     @SendTo("/topic/{chatId}")
-    public InquiryMessageResponseDto sendChatMessage(@DestinationVariable Integer chatId, 
+    public InquiryMessageResponseDto sendChatMessage(@DestinationVariable("chatId") Integer chatId, 
                                                   @Payload InquiryMessageRequestDto requestDto) {
         return inquiryService.sendMessage(requestDto);
     }
@@ -153,7 +153,6 @@ public class InquiryController {
     }
     
     //채팅방 입장 알람
-    @MessageMapping("/inquiry/{chatId}/join")
     @Operation(summary = "채팅방 입장 알람", description = "채팅방 입장 알람을 보냅니다.")
     @ApiResponse(
         responseCode = "200",

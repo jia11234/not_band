@@ -68,7 +68,7 @@ export default function ChatList() {
       setOpen(true);
     }
   }, []);
-
+const broker_url = import.meta.env.VITE_WS_URL;
 useEffect(() => {
   if (!token || chatRoom.length === 0) return;
 
@@ -76,7 +76,7 @@ useEffect(() => {
   const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
   const decoded = JSON.parse(window.atob(base64));
   const client = new Client({
-    brokerURL: "ws://localhost:8080/ws",
+    brokerURL: broker_url,
     connectHeaders: {
       Authorization: `Bearer ${token}`,
     },
@@ -149,7 +149,7 @@ useEffect(() => {
       <Dialog open={open} onClose={handleClose} disableScrollLock>
         <DialogTitle>NOT_BAND</DialogTitle>
         <DialogContent>
-          <p>로그인 후에만 사용할 수 있어여</p>
+          <p>로그인 후에만 사용할 수 있어요</p>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="secondary">

@@ -1,4 +1,4 @@
-.id_find_group {
+.id_find_group, .password_find_group {
   margin-top: -8vh;
   display: flex;
   flex-direction: column;
@@ -7,6 +7,20 @@
   justify-content: center;
 }
 
-.id_find_group div div {
+.id_find_group div div, .password_find_group div div {
   margin-top: 0px;
+}
+
+.password_find_id p {
+  margin-left: 2px;
+}
+
+.password_find_id {
+  display: flex;
+  flex-direction: column;
+}
+
+.password_find_id input {
+  position: relative;
+  left: -1px;
 }

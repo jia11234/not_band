@@ -1,5 +1,10 @@
 package com.not_band.service.product;
 
+import software.amazon.awssdk.core.sync.RequestBody;
+import software.amazon.awssdk.services.s3.S3Client;
+import software.amazon.awssdk.services.s3.model.PutObjectRequest;
+import org.springframework.beans.factory.annotation.Value;
+
 import com.not_band.dto.response.product.ProductOptionDto;
 import com.not_band.dto.response.product.ProductResponseDto;
 import com.not_band.entity.ProductEntity;
@@ -20,6 +25,11 @@ import java.util.stream.Collectors;
     @Service
     @RequiredArgsConstructor
     public class ProductService {
+        private final S3Client s3Client;
+
+        @Value("${cloud.aws.s3.bucket}")
+        private String bucket;
+
         private final ProductRepository productRepository;
         private final ProductOptionRepository productOptionRepository;
 
@@ -81,11 +91,20 @@ import java.util.stream.Collectors;
         byte[] imageBytes = Base64.getDecoder().decode(base64Image);
 
         // 경로 설정: C:/upload/product/ 또는 C:/upload/detail/
-        String directory = "/upload/" + folder + "/";
+        String directory = "upload/" + folder + "/";
         Files.createDirectories(Paths.get(directory));
 
-        Path filePath = Paths.get(directory + filename);
-        Files.write(filePath, imageBytes);
+        String key = directory + filename;
+        // Path filePath = Paths.get(directory + filename);
+        // Files.write(filePath, imageBytes);
+
+        s3Client.putObject(
+                PutObjectRequest.builder()
+                        .bucket(bucket)
+                        .key(key)
+                        .build(),
+                RequestBody.fromBytes(imageBytes)
+        ); 
 
         // 프론트 접근 경로 설정: /images/product/ 또는 /images/detail/
         return "/images/" + folder + "/" + filename;

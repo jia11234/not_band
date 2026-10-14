@@ -9,6 +9,7 @@ export default function MypageOrder({ memId, products }) {
   const [totalOrder, setTotalOrder] = useState(0);
   const [groupedItems, setGroupedItems] = useState({});
   const [reviews, setReviews] = useState([]);
+  const API_URL = import.meta.env.VITE_API_URL;
   const [orderStatus, setOrderStatus] = useState({
     received: 0,
     paid: 1,
@@ -204,7 +205,7 @@ export default function MypageOrder({ memId, products }) {
                             <p className="mp_ord_add">추가상품</p>
                           )}
                           <div className="mp_ord_list_product_group">
-                          <img src={`http://localhost:8080/api/v1/not_band/images/product/${product.prdNo}.png`} />
+                          <img src={`${API_URL}/api/v1/not_band/images/product/${product.prdNo}.png`} />
                             <div>
                               <p
                                 style={{

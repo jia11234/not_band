@@ -7,6 +7,7 @@ import Paging from "../Mypage/Paging";
 export default function ResellList({ products }) {
   const [showResellOnly, setShowResellOnly] = useState(false); // 중고 상품만 보기 상태
   const [value2, setValue2] = useState(1);
+  const API_URL = import.meta.env.VITE_API_URL;
   const getTimeAgo = (resTime) => {
     const posted = new Date(resTime);
     const now = new Date();
@@ -59,7 +60,7 @@ export default function ResellList({ products }) {
                     src={
                       product.image?.startsWith("http")
                         ? product.image
-                        : `http://localhost:8080/api/v1/not_band${product.image}`
+                        : `${API_URL}/api/v1/not_band${product.image}`
                     }
                     alt={product.name}
                   />
@@ -68,7 +69,7 @@ export default function ResellList({ products }) {
               {product.prdNo && (
                 <Link to={`/not_band/instrument-detail?prdNo=${product.prdNo}`}>
                   <img
-                    src={`http://localhost:8080/api/v1/not_band/images/product/${product.prdNo}.png`}
+                    src={`${API_URL}/api/v1/not_band/images/product/${product.prdNo}.png`}
                     alt={product.name}
                   />
                 </Link>

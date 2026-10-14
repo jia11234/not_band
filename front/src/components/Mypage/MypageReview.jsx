@@ -21,7 +21,8 @@ export default function MypageReview() {
   const [cookies, setCookie, removeCookie] = useCookies(["accessToken"]);
   const [products, setProducts] = useState([]);
   const [products2, setProducts2] = useState([]);
-
+  const API_URL = import.meta.env.VITE_API_URL;
+  
   useEffect(() => {
     const token = cookies.accessToken; // 쿠키에서 토큰 가져오기
     const memId = getMemIdFromToken(token);
@@ -163,7 +164,7 @@ export default function MypageReview() {
                 style={{ borderBottom: "none", position: "relative" }}
               >
                 <div className="mypage_review_title_group">
-                <img src={`http://localhost:8080/api/v1/not_band/images/product/${item.prdNo}.png`} />
+                <img src={`${API_URL}/api/v1/not_band/images/product/${item.prdNo}.png`} />
                   <div className="mp_R_ws_prd_text">
                     <div>
                       <p>
@@ -218,7 +219,7 @@ export default function MypageReview() {
                   {item.revImgUrl.map((img, idx) => (
                     <div className="reviewcon_img" key={idx}>
                       <img
-                          src={`http://localhost:8080/api/v1/not_band/images/review/${
+                          src={`${API_URL}/api/v1/not_band/images/review/${
                             img.substring(img.lastIndexOf("/") + 1)
                           }`}
                           alt={img}

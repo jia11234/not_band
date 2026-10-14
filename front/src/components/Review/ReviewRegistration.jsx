@@ -38,7 +38,7 @@ export default function ReviewRegistration() {
   const [products, setProducts] = useState([]);
   const [openSuccessDialog, setOpenSuccessDialog] = useState(false);
   const handleSuccessDialogClose = () => setOpenSuccessDialog(false);
-
+  const API_URL = import.meta.env.VITE_API_URL;
   const handleClose = () => {
     setOpen(false); // 모달 닫기
     navigate("/not_band");
@@ -92,7 +92,7 @@ export default function ReviewRegistration() {
       (data.revImgUrl || []).map((img) =>
         img.startsWith("http")
           ? img
-          : `http://localhost:8080/api/v1/not_band/images/review/${img.replace("/images/review/", "")}`,
+          : `${API_URL}/api/v1/not_band/images/review/${img.replace("/images/review/", "")}`,
       ),
     );
   };
@@ -240,7 +240,7 @@ export default function ReviewRegistration() {
         <div className="review_prd">
           <div className="review_prd_img">
             <img
-              src={`http://localhost:8080/api/v1/not_band/images/product/${product.prdNo}.png`}
+              src={`${API_URL}/api/v1/not_band/images/product/${product.prdNo}.png`}
               alt={product.prdNo}
             />
           </div>

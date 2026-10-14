@@ -8,7 +8,7 @@ export default function SignIn() {
     <div className="not_found">
       <p class="material-symbols-outlined">check_circle</p>
       <h1>회원가입성공!</h1>
-      <p>
+      <p className="sign_in_success">
         회원가입을 축하합니다.
         <br /> 이제 not_band에서 당신의 밴드 열정을 마음껏 펼쳐보세요!
       </p>

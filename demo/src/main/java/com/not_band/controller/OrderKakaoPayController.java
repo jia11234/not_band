@@ -23,7 +23,7 @@ public class OrderKakaoPayController {
         description = "결제 성공"
     )
     public String kakaoPayReady    (
-    @RequestParam("userId") String userId,
+    @RequestParam("userIrd") String userId,
     @RequestParam("itemName") String itemName,
     @RequestParam("quantity") int quantity,
     @RequestParam("amount") int amount,

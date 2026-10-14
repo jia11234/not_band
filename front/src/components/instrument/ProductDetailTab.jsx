@@ -10,6 +10,7 @@ export default function ProductDetailTab({ product }) {
   const [value2, setValue2] = useState(1);
   const [tab, setTab] = useState(1);
   const [reviews, setReviews] = useState([]);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     fetchReview(product.prdNo);
@@ -159,7 +160,7 @@ export default function ProductDetailTab({ product }) {
       </div>
       {tab === 1 && (
         <img
-          src={`http://localhost:8080/api/v1/not_band/images/detail/${product.prdNo}.png`}
+          src={`${API_URL}/api/v1/not_band/images/detail/${product.prdNo}.png`}
           alt={`${product.prdNo}`}
           className="con5"
         />
@@ -220,8 +221,8 @@ export default function ProductDetailTab({ product }) {
                           <img
                             src={
                               img.startsWith("/images/resell")
-                                ? `http://localhost:8080/api/v1/not_band/images/review/${img.replace("/images/resell/", "")}`
-                                : `http://localhost:8080/api/v1/not_band/${img.replace(/^\//, "")}` // 맨 앞 / 제거
+                                ? `${API_URL}/api/v1/not_band/images/review/${img.replace("/images/resell/", "")}`
+                                : `${API_URL}/api/v1/not_band/${img.replace(/^\//, "")}` // 맨 앞 / 제거
                             }
                             alt={`Review Image ${idx}`}
                           />

@@ -11,7 +11,7 @@ export default function ResellList({ products, value2 }) {
     if (value2 === 3) return index >= 32 && index < 48;
     return false;
   });
-
+  const API_URL = import.meta.env.VITE_API_URL;
   //중고 상품 등록일 출력
   const getTimeAgo = (resTime) => {
     const posted = new Date(resTime);
@@ -53,7 +53,7 @@ export default function ResellList({ products, value2 }) {
                     <div className="status_overlay">예약중</div> // 예약중 표시
                   )}
                   <img
-                    src={`http://localhost:8080/api/v1/not_band${product.resImgUrl1}`}
+                    src={`${API_URL}/api/v1/not_band${product.resImgUrl1}`}
                     alt={`${product.resPrd}`}
                   />
                 </Link>

@@ -117,6 +117,7 @@ textarea::placeholder {
     justify-content: center;
     margin-top: 70px;
     border-radius: 5px;
+    border: none;
 }
 
 #AdminCsUpload_btn {

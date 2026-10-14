@@ -34,7 +34,7 @@ export default function ResellDetail() {
   });
   const [viewCount2, setViewCount2] = useState(0);
   const [hasViewed, setHasViewed] = useState(false);
-
+  const API_URL = import.meta.env.VITE_API_URL;
   //모달 닫기
   const handleClose = () => {
     setOpen(false);
@@ -185,7 +185,7 @@ export default function ResellDetail() {
       <Dialog open={open} onClose={handleClose} disableScrollLock>
         <DialogTitle>NOT_BAND</DialogTitle>
         <DialogContent>
-          <p>로그인 후에만 사용할 수 있어여</p>
+          <p>로그인 후에만 사용할 수 있어요</p>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="secondary">
@@ -203,7 +203,7 @@ export default function ResellDetail() {
               {resell.resImgUrl.map((url, index) => (
                 <div key={index}>
                   <img
-                    src={`http://localhost:8080/api/v1/not_band${url}`}
+                    src={`${API_URL}/api/v1/not_band${url}`}
                     alt={`resell-image-${index}`}
                   />
                 </div>
@@ -212,7 +212,7 @@ export default function ResellDetail() {
           ) : (
             <div>
               <img
-                src={`http://localhost:8080/api/v1/not_band${resell.resImgUrl}`}
+                src={`${API_URL}/api/v1/not_band${resell.resImgUrl}`}
                 alt={`resell-image-${resell.resImgUrl}`}
               />
             </div>

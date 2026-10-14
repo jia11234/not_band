@@ -107,12 +107,12 @@ export default function Header({ cartCount }) {
   };
 
 
-
+  const broker_url = import.meta.env.VITE_WS_URL;
   useEffect(() => {
     if (!token || chatRoom.length === 0) return;
 
     const client = new Client({
-      brokerURL: "ws://localhost:8080/ws",
+      brokerURL: "broker_url",
       connectHeaders: {
         Authorization: `Bearer ${token}`,
       },
@@ -565,13 +565,13 @@ const menuRef = useRef(null);
                         <Link
                           to={`not_band/instrument-list?category=${category.to}`}
                         >
-                          <h4
+                          <h4 className={isMainPage ? "s_menu_title main" : "s_menu_title"}
                             style={{
                               color: isMainPage
                                 ? scrolling
-                                  ? "#FCFEFD"
-                                  : "#FCFEFD"
-                                : "#0a0a0a",
+                                  ? ".s_menu_title.main"
+                                  : ".s_menu_title.main"
+                                : ".s_menu_title",
                             }}
                           >
                             {category.name}
@@ -583,13 +583,13 @@ const menuRef = useRef(null);
                               key={subIndex}
                               to={`not_band/instrument-list?category=${item.to}`}
                             >
-                              <p
+                              <p className={isMainPage ? "s_menu_title main" : "s_menu_title"}
                                 style={{
                                   color: isMainPage
                                     ? scrolling
-                                      ? "#FCFEFD"
-                                      : "#FCFEFD"
-                                    : "#0a0a0a",
+                                      ? ".s_menu_title.main"
+                                      : ".s_menu_title.main"
+                                    : ".s_menu_title",
                                 }}
                               >
                                 {item.name}
@@ -629,13 +629,13 @@ const menuRef = useRef(null);
                     {resall.map((category, index) => (
                       <div key={index} className="s_menu">
                         <Link to={category.to}>
-                          <h4
+                          <h4 className={isMainPage ? "s_menu_title main" : "s_menu_title"}
                             style={{
                               color: isMainPage
                                 ? scrolling
-                                  ? "#FCFEFD"
-                                  : "#FCFEFD"
-                                : "#0a0a0a",
+                                  ? ".s_menu_title.main"
+                                  : ".s_menu_title.main"
+                                : ".s_menu_title",
                             }}
                           >
                             {category.name}

@@ -10,7 +10,6 @@ import { getCartCount } from "./apis";
 import "./css/main/index.css";
 import { BrowserRouter, useLocation } from "react-router-dom";
 import AdminHeader from "./components/Admin/AdminHeader.jsx";
-
 //푸터 삭제
 const AppLayout = () => {
   const location = useLocation();
@@ -24,6 +23,7 @@ const AppLayout = () => {
   const hideFooteradmin =
     pathname === "/not_band/admin" || pathname.startsWith("/not_band/admin/");
   const [cartCount, setCartCount] = useState(0);
+
 
   useEffect(() => {
     const token = cookies.accessToken; 

@@ -26,7 +26,6 @@ export default function AdminChatList() {
   const fetchChatRoom = async (id) => {
     const data = await getInquiry(id); // 수정된 API 호출
     setChatRoom(data);
-    console.log("모든내역", data);
   };
 
   const getProductTitle = (resId) => {

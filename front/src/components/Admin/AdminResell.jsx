@@ -19,7 +19,7 @@ export default function AdminResell() {
   const start = (value2 - 1) * page;
   const end = start + page;
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
-
+  const API_URL = import.meta.env.VITE_API_URL;
   const toggleHeart = async (resId, memId) => {
     const data = await resellDelete(resId);
     fetchResells();
@@ -79,7 +79,7 @@ export default function AdminResell() {
                 <td>
                   {" "}
                   <img
-                    src={`http://localhost:8080/api/v1/not_band${resell.resImgUrl1}`}
+                    src={`${API_URL}/api/v1/not_band${resell.resImgUrl1}`}
                     alt={`${resell.resPrd}`}
                   />
                 </td>

@@ -16,7 +16,7 @@ export default function () {
   const [value2, setValue2] = useState(1);
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
-
+  const API_URL = import.meta.env.VITE_API_URL;
   const handleDelete2 = (prdNo) => {
     navigate(`/not_band/admin/productupload?prdNo3=${prdNo}`);
   };
@@ -84,7 +84,7 @@ export default function () {
             <tr className="adminProduct_Tbody" key={index}>
               <td>
                 <img
-                  src={`http://localhost:8080/api/v1/not_band/images/product/${product.prdNo}.png`}
+                  src={`${API_URL}/api/v1/not_band/images/product/${product.prdNo}.png`}
 
                   alt={`${product.prdNo}`}
                 />

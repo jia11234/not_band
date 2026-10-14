@@ -204,6 +204,10 @@ nav .menu:hover::after {
   gap: 10px;
 }
 
+.s_menu_title { color: #0a0a0a; }
+.s_menu_title.main { color: #FCFEFD; }
+.s_menu_title:hover { color: #ff4a01; }
+
 .s_menu_group .menu_picture img {
   background-color: #FCFEFD;
   width: 200px;
@@ -243,6 +247,10 @@ nav .menu:hover::after {
   font-weight: 600;
 }
 
+#my_hover div p:hover {
+  color: #feb33e
+}
+
 nav:hover #header_line {
   display: block;
 }
@@ -279,6 +287,10 @@ nav:hover #header_line {
   color: #FCFEFD;
   font-size: 20px;
   font-weight: 600;
+}
+
+#talk_hover div p:hover {
+  color: #feb33e;
 }
 
 #talk_hover div div{

@@ -52,6 +52,7 @@ export default function Order() {
   const [deliveryRequest, setDeliveryRequest] = useState("");
   const [deliveryPrice, setDeliveryPrice] = useState(0);
   const navigate = useNavigate();
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const fetchUser = async (memId) => {
     try {
@@ -341,7 +342,7 @@ export default function Order() {
     try {
       const ordNo = await addToOrder(cartItem);
       const res = await axios.get(
-        "http://localhost:8080/api/v1/not_band/pay/ready",
+        "${API_URL}/api/v1/not_band/pay/ready",
         {
           params: {
             userId: orderName,
@@ -488,7 +489,7 @@ export default function Order() {
                   >
                     <td className="order_list_product">
                       <div className="order_list_product_group">
-                      <img src={`http://localhost:8080/api/v1/not_band/images/product/${item.prdNo}.png`} />
+                      <img src={`${API_URL}/api/v1/not_band/images/product/${item.prdNo}.png`} />
                         <div>
                           <p
                             style={{

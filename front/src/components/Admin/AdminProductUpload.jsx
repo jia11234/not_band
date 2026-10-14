@@ -7,6 +7,8 @@ import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 export default function AdminProductUpload() {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const imgRef = useRef();
   const prdNameRef = useRef();
   const modelRef = useRef();
@@ -152,11 +154,11 @@ export default function AdminProductUpload() {
     setImages([
       prdData.prdUrl.startsWith("http")
         ? prdData.prdUrl
-        : `http://localhost:8080/api/v1/not_band/images/product/${prdData.prdUrl.replace("/images/product/", "")}`,
+        : `${API_URL}/api/v1/not_band/images/product/${prdData.prdUrl.replace("/images/product/", "")}`,
     
       prdData.prdDetailUrl.startsWith("http")
         ? prdData.prdDetailUrl
-        : `http://localhost:8080/api/v1/not_band/images/detail/${prdData.prdDetailUrl.replace("/images/detail/", "")}`
+        : `${API_URL}/api/v1/not_band/images/detail/${prdData.prdDetailUrl.replace("/images/detail/", "")}`
     ]);
   };
 

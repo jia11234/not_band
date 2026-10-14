@@ -15,6 +15,8 @@ export default function MypageWish() {
     { prdNo: 102, name: "베이스 기타 스트랩", price: 32000, selected: false },
   ]);
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const getMemIdFromToken = (token) => {
     if (!token) return null;
 
@@ -121,7 +123,7 @@ export default function MypageWish() {
             <div key={item.wishId} className="mp_R_wishlist_prd_group">
               <div>
                 <img
-                  src={`http://localhost:8080/api/v1/not_band${productUrl}`}
+                  src={`${API_URL}/api/v1/not_band${productUrl}`}
                   alt={`${item.resId}`}
                 />
                 <div className="mp_R_ws_prd_text">

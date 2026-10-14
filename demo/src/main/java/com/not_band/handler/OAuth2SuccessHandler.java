@@ -2,6 +2,7 @@ package com.not_band.handler;
 
 import java.io.IOException;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
@@ -20,6 +21,9 @@ public class OAuth2SuccessHandler extends SimpleUrlAuthenticationSuccessHandler{
 
     private final JwtProvider jwtProvider;
 
+    @Value("${app.base-url}")
+    private String base_url;
+
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
         Authentication authentication) throws IOException, ServletException {
@@ -29,6 +33,6 @@ public class OAuth2SuccessHandler extends SimpleUrlAuthenticationSuccessHandler{
             String userId = oAuth2User.getName();
             String token = jwtProvider.create(userId);
 
-            response.sendRedirect("http://localhost:5173/not_band/oauth-response/"+token+"/7200");
+            response.sendRedirect(base_url + "/not_band/oauth-response/" + token + "/7200");
     }
 }

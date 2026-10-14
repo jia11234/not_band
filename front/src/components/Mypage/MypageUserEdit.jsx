@@ -416,7 +416,7 @@ export default function MypageUserEdit() {
           setMessage(newMessage);
           return;
         } else if (data.nickname === user.memNickname) {
-          newMessage.nickname = "같은 닉네임 입니다";
+          newMessage.nickname = "같은 닉네임입니다";
           setMessage(newMessage);
           return;
         } else {

@@ -344,7 +344,7 @@ export default function IdFind() {
           ref={certification_numberRef}
           value={data.certification_number}
           onChange={dataChange}
-          placeholder="아이디를 입력해주세요"
+          placeholder="인증번호를 입력해주세요"
           maxLength={4}
         />
         <button
@@ -395,7 +395,7 @@ export default function IdFind() {
       </div>
 
       <button type="submit" className="btnRed" onClick={signUpSubmit}>
-        비밀번호 찾기
+        아이디 찾기
       </button>
     </div>
   );

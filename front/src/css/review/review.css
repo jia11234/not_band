@@ -3,7 +3,6 @@
     max-width: 700px;
     margin: 90px auto 200px auto;
     padding: 0 16px;
-    /* 좌우 여백 추가 */
     box-sizing: border-box;
 }
 
@@ -192,7 +191,6 @@ input#review_btn {
     margin: 70px auto 250px auto;
     box-sizing: border-box;
     min-width: 0;
-    /* input이 기본적으로 줄어드는 걸 막는 속성 제거 */
 }
 
 

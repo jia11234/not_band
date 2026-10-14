@@ -104,12 +104,10 @@ export default function ResellRegistration() {
     const getMemIdFromToken = (token) => {
         if (!token) return null;
     
-        console.log("Decoded Token:", token);
     
         const base64Url = token.split('.')[1];
         const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/'); 
-        const decoded = JSON.parse(window.atob(base64)); 
-        console.log("Decoded Payload:", decoded); 
+        const decoded = JSON.parse(window.atob(base64)); ; 
     
         return decoded.sub;
     };
@@ -409,10 +407,8 @@ export default function ResellRegistration() {
                 resCondition: document.querySelector('input[name="resellform_condition"]:checked')?.value
             }  
             await addToResell(productData);
-            console.log("보낼 데이터:", productData);
             setOpenSuccessDialog(true);
         
-        console.log("보낼 데이터:", productData);
     };
 
     return (
@@ -420,7 +416,7 @@ export default function ResellRegistration() {
             <Dialog open={open} onClose={handleClose} disableScrollLock>
                 <DialogTitle>NOT_BAND</DialogTitle>
                 <DialogContent>
-                <p>상품 등록은 로그인 후에만 사용할 수 있어여</p>
+                <p>상품 등록은 로그인 후에만 사용할 수 있어요</p>
                 </DialogContent>
                 <DialogActions>
                 <Button onClick={handleClose} sx={{ color: '#0371B9', fontSize:'19px', fontWeight:'500', width:'150px'}}>
