@@ -64,4 +64,6 @@ Desktop.ini
 *.tar.gz
 *.war
 *.jar
+*.jar
+!**/gradle/wrapper/gradle-wrapper.jar
 *.ear

@@ -1,8 +1,10 @@
-# Java 17 
-FROM eclipse-temurin:17-jdk
+FROM eclipse-temurin:17-jdk AS build
+WORKDIR /app
+COPY . .
+RUN chmod +x gradlew && ./gradlew clean build -x test
 
-# jar파일
-COPY build/libs/demo-0.0.1-SNAPSHOT.jar app.jar
-
-# 애플리케이션 실행
+FROM eclipse-temurin:17-jre
+WORKDIR /app
+COPY --from=build /app/build/libs/*-SNAPSHOT.jar app.jar
+EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]

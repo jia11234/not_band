@@ -1,0 +1,18 @@
+services:
+  backend:
+    build: demo/
+    container_name: notband
+    ports:
+      - "8080:8080"
+    restart: always
+
+  frontend:
+    build: front/
+    container_name: notband-front
+    ports:
+      - "80:80"
+    env_file:
+      - front/.env
+    depends_on:
+      - backend
+    restart: always
