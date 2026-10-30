@@ -342,15 +342,19 @@ export default function ThreeD() {
                     scale={1.5}
                     onPointerDown={(e) => {
                       if (!isPlayMode) return;
+                      const mesh = e.object;
                       e.stopPropagation();
                       const hiName = hatDown ? "HiHatOpen" : "HiHatClose";
-                      const original = e.object.material.color.clone();
-                      e.object.material = e.object.material.clone();
+                        if (!mesh.userData.originalColor) {
+                          mesh.material = mesh.material.clone();
+                          mesh.userData.originalColor = mesh.material.color.clone();
+                        }
                       e.object.material.color.set("#4F959D");
                       playInstrument(hiName, soundOffsets[hiName]);
                       setTimeout(() => {
-                        e.object.material.color.copy(original);
-                      }, 500);
+                        e.object.material.color.copy(mesh.userData.originalColor);
+                      }, 150);
+                      clearTimeout(mesh.userData.timer);
                     }}
                   />
                 );
@@ -391,14 +395,18 @@ export default function ThreeD() {
                         object={m}
                         onPointerDown={(e) => {
                           if (!isPlayMode) return;
+                          const mesh = e.object;
                           e.stopPropagation();
-                          const original = m.material.color.clone();
-                          m.material = m.material.clone();
+                            if (!mesh.userData.originalColor) {
+                              mesh.material = mesh.material.clone();
+                              mesh.userData.originalColor = mesh.material.color.clone();
+                            }
                           m.material.color.set("#4F959D");
                           handleBassDrum();
                           setTimeout(() => {
-                            m.material.color.copy(original);
-                          }, 500);
+                            m.material.color.copy(mesh.userData.originalColor);
+                          }, 150);
+                          clearTimeout(mesh.userData.timer);
                         }}
                       />
                     ))}
@@ -423,14 +431,18 @@ export default function ThreeD() {
                     scale={1.5}
                     onPointerDown={(e) => {
                       if (!isPlayMode) return;
+                      const mesh = e.object;
                       e.stopPropagation();
-                      const original = e.object.material.color.clone();
-                      e.object.material = e.object.material.clone();
+                      if (!mesh.userData.originalColor) {
+                        mesh.material = mesh.material.clone();
+                        mesh.userData.originalColor = mesh.material.color.clone();
+                      }
                       e.object.material.color.set("#4F959D");
                       playInstrument(name, soundOffsets[name]);
                       setTimeout(() => {
-                        e.object.material.color.copy(original);
-                      }, 500);
+                        e.object.material.color.copy(mesh.userData.originalColor);
+                      }, 150);
+                      clearTimeout(mesh.userData.timer);
                     }}
                   />
                 );

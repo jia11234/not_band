@@ -31,10 +31,6 @@ config/local.json
 node_modules/ 
 bower_components/
 
-# glb 파일 제외
-*.glb
-3d/*
-
 # IDE 설정 관련 제외
 .vscode/
 .idea/
