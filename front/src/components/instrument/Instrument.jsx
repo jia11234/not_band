@@ -10,6 +10,7 @@ import Paging from "../Mypage/Paging";
 export default function Instrument({setCartCount}) {
   const [value2, setValue2] = useState(1);
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [productTitle, setProductTitle] = useState("");
   const [sortedProducts, setSortedProducts] = useState([]);
   const [starter, setStarter] = useState(false);
@@ -51,6 +52,7 @@ export default function Instrument({setCartCount}) {
 
   useEffect(() => {
     const fetchProducts = async () => {
+
       let categoryData = [];
 
       if (category) {
@@ -145,6 +147,9 @@ export default function Instrument({setCartCount}) {
     };
 
     fetchProducts();
+    if (products.length==0){
+      setLoading(false)
+    }
   }, [category]);
 
   const handleSortChange = (sortType) => {
@@ -305,7 +310,7 @@ export default function Instrument({setCartCount}) {
         </div>
       </div>
 
-      <ProductList products={products} value2={value2} starter={starter} setCartCount={setCartCount}/>
+      <ProductList loading={loading} products={products} value2={value2} starter={starter} setCartCount={setCartCount}/>
       <div className="page_change">
           <Paging
             page={page}

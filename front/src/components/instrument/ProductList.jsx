@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import "../../css/instrument/starter.css";
 
-export default function ProductList({ products, value2, setCartCount }) {
+export default function ProductList({loading, products, value2, setCartCount }) {
   const [cookies, setCookie, removeCookie] = useCookies(["accessToken"]);
   const [row, setRow] = useState(4);
   const navigate = useNavigate();
@@ -242,7 +242,7 @@ export default function ProductList({ products, value2, setCartCount }) {
         </DialogActions>
       </Dialog>
       <div className="product_group_list">
-        {filteredProducts.length > 0 ? (
+        {!loading ? (
           filteredProducts.map((product, index) => (
             <div className="product_group" key={index}>
               <div className="product_img">
