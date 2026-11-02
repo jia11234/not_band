@@ -5,13 +5,13 @@
 ---
 
 ## 📑 목차
-- [프로젝트 소개](https://github.com/jia11234/not_band?tab=readme-ov-file#-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%86%8C%EA%B0%9C)
-- [폴더 구성](https://github.com/jia11234/not_band?tab=readme-ov-file#%EF%B8%8F-%ED%8F%B4%EB%8D%94-%EA%B5%AC%EC%84%B1)
-- [주요 기능](https://github.com/jia11234/not_band?tab=readme-ov-file#-%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5)
-- [API 명세서](https://github.com/jia11234/not_band?tab=readme-ov-file#-api-%EB%AA%85%EC%84%B8%EC%84%9C)
-- [DB ERD](https://github.com/jia11234/not_band?tab=readme-ov-file#-db-erd)
-- [팀원](https://github.com/jia11234/not_band?tab=readme-ov-file#-%ED%8C%80%EC%9B%90)
-
+1. [프로젝트 소개](#-프로젝트-소개)
+2. [폴더 구성](#폴더-구성)
+3. [주요 기능](#-주요-기능)
+4. [API 명세서](#-api-명세서)
+5. [시스템 아키텍처](#시스템-아키텍처)
+6. [DB ERD](#-db-erd)
+7. [팀원](#-팀원)
 ---
 
 ## 📖 프로젝트 소개
@@ -23,7 +23,7 @@
 ### 🛠️ **기술 스택**: React, Spring Boot, MySQL, Three.js, WebSocket
 
 ---
-
+<a id="폴더-구성"></a>
 ## 🗂️ 폴더 구성
 
 ### 📁 **백엔드 (demo)**  
@@ -144,7 +144,12 @@ JWT, OAuth2(Naver/Kakao)로 로그인이 가능합니다.
 ><br><br>
 
 ----
+<a id="시스템-아키텍처"></a>
+## ⚙️ 시스템 아키텍처
 
+<img width="1832" height="1030" alt="Frame 51" src="https://github.com/user-attachments/assets/9ae4dbce-07a4-41b4-a268-f3de49a4fd82" />
+
+---
 ## 📄 DB ERD
 
 <img src="https://github.com/jia11234/not_band/blob/main/README%20%EB%A6%AC%EC%86%8C%EC%8A%A4/ERD.png" width="1200"><br><br>
